@@ -8,6 +8,7 @@ import wordPreview from "../../assets/page-images/word.png";
 import bamazonPreview from "../../assets/page-images/bamazon.png";
 import liriPreview from "../../assets/page-images/liri.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "./style.css";
 
 class NodePortfolio extends Component {
     render() {
@@ -23,9 +24,8 @@ class NodePortfolio extends Component {
                                 <Card.Img className="img-fluid" src={wordPreview} alt="word-screenshot"/>
                             </FrontSide>
                             <BackSide>
-                                <p className="text-center">Entertainment app for finding and downloading Gifs.</p>
-                                <a rel="noopener noreferrer" className="text-center" href="https://mshuster4.github.io/Giftastic/"><p>Launch Giftastic <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
-                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                                <p className="text-center">CLI word guessing game application.</p>
+                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Word-Guess" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
                             </BackSide>
                         </Flippy>
                     </Col>
@@ -38,9 +38,8 @@ class NodePortfolio extends Component {
                                 <Card.Img className="img-fluid" src={bamazonPreview} alt="bamazon-screenshot"/>
                             </FrontSide>
                             <BackSide>
-                                <p className="text-center"> Neighborhood forum for buying, selling, and posting events.</p>
-                                <a rel="noopener noreferrer" className="text-center" href="https://blockpartyucsd.herokuapp.com/"><p>Launch Block Party <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
-                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Block-Party" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                                <p className="text-center">CLI store front application.</p>
+                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Bamazon" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
                             </BackSide>
                         </Flippy>
                     </Col>
@@ -53,8 +52,7 @@ class NodePortfolio extends Component {
                                 <Card.Img className="img-fluid" src={liriPreview} alt="friend-screenshot"/>
                             </FrontSide>
                             <BackSide>
-                                <p className="text-center">Social app for finding friends.</p>
-                                 <a rel="noopener noreferrer" className="text-center" href="https://calm-springs-34430.herokuapp.com/"><p>Launch Friend Finder <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
+                                <p className="text-center">CLI song, movie, and concert search application.</p>
                                 <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Friend-Finder" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
                             </BackSide>
                         </Flippy>
