@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Container from 'react-bootstrap/Container';
-import Card from "react-bootstrap/Card";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from "react-bootstrap/Card";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import wordPreview from "../../assets/page-images/word.png";
 import bamazonPreview from "../../assets/page-images/bamazon.png";
