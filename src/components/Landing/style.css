@@ -1,10 +1,15 @@
-.container {
-    margin-top: 50px;
+.bg-image {
+    background-image: url("../../assets/page-images/landing-background.png");
+}
+
+.landing-text {
+    margin-top: 30px;
 }
 
 p {
-    font-size: 45px;
+    font-size: 2rem;
     font-family: objektiv-mk1,sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: black;
 }

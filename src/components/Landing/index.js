@@ -10,20 +10,21 @@ class Landing extends Component {
         return (
             <Container>
                 <Row>
-                    <Col sm={12}>
-                        <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
-                            <p className="text-center">Hello.</p>
-                        </Animated>
+                    <Col sm={7}>
+                        <div className="landing-text">
+                            <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
+                                <p>Hello.</p>
+                            </Animated>
+                            <Animated animationIn="fadeIn" animationInDelay={2000} isViibile={true}>
+                                <p>My name is Marguerite Shuster.</p>
+                            </Animated>
+                            <Animated animationIn="fadeIn" animationInDelay={3000} isViibile={true}>
+                                <p>I am a Web Developer and UI Designer.</p>
+                            </Animated>
+                        </div>
                     </Col>
-                    <Col sm={12}>
-                        <Animated animationIn="fadeIn" animationInDelay={2000} isViibile={true}>
-                            <p className="text-center">My name is Marguerite Shuster.</p>
-                         </Animated>
-                    </Col>
-                    <Col sm={12}>
-                        <Animated animationIn="fadeIn" animationInDelay={3000} isViibile={true}>
-                            <p className="text-center">I am a Web Developer and UI Designer.</p>
-                        </Animated>
+                    <Col sm={5}>
+                        <div class="bg-image"></div>
                     </Col>
                 </Row>
             </Container>
