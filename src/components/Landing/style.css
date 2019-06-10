@@ -1,9 +1,20 @@
+
 .bg-image {
-    background-image: url("../../assets/page-images/landing-background.png");
+    background-image: url("../../assets/page-images/landing-page-img.png");
+    height: 94vh;
+    position: bottom right;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 100% 90%;
 }
 
 .landing-text {
-    margin-top: 30px;
+    padding-left: 80px;
+    margin-top: 4rem;
+}
+
+.portfolio-button {
+    padding-left: 80px;
 }
 
 p {

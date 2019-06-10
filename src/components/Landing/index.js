@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "./style.css"
 import {Animated} from "react-animated-css";
+import "./style.css"
 
 class Landing extends Component {
     render() {
         return (
-            <Container>
+            <Container fluid={true} className="landing-container">
                 <Row>
-                    <Col sm={7}>
-                        <div className="landing-text">
+                    <Col sm={6}>
+                        <div className="landing-text text-left">
                             <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
                                 <p>Hello.</p>
                             </Animated>
@@ -23,8 +23,8 @@ class Landing extends Component {
                             </Animated>
                         </div>
                     </Col>
-                    <Col sm={5}>
-                        <div class="bg-image"></div>
+                    <Col sm={6}>
+                      <div className="bg-image"></div>
                     </Col>
                 </Row>
             </Container>

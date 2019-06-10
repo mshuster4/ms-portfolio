@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import JavascriptPortfolio from "../JavascriptPortfolio";
-import NodePortfolio from "../NodePortfolio";
 import ReactPortfolio from "../ReactPortfolio";
+import Container from 'react-bootstrap/Container'
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 
@@ -15,6 +15,7 @@ class PortfolioContainer extends Component {
 
     render() {
         return (
+            <Container>
                 <Tabs
                     id="controlled-tab-example"
                     fill variant="tabs"
@@ -25,12 +26,13 @@ class PortfolioContainer extends Component {
                         <JavascriptPortfolio/>
                     </Tab>
                     <Tab eventKey="nodePortfolio" title="Node.js">
-                        <NodePortfolio/>
+                        <div>Node Here</div>
                     </Tab>
                     <Tab eventKey="reactPortfolio" title="React.js">
                         <ReactPortfolio/>
                     </Tab>
                 </Tabs>
+            </Container>
             );
     }
 }
