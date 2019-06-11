@@ -13,6 +13,7 @@
     "mdbreact": "^4.15.0",
     "react": "^16.8.6",
     "react-animated-css": "^1.2.1",
+    "react-animated-modal": "^1.1.1",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-flippy": "^0.1.2",
