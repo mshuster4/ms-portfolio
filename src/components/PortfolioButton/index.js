@@ -1,13 +1,23 @@
 import React from "react";
-import Button from 'react-bootstrap/Button'
+import { MDBBtn } from 'mdbreact';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  "./style.css"
 
-function PortfolioButton () {
+class PortfolioButton extends React.Component {
+
+  handleClick = () => {
+    this.props.onClick();
+  }
+
+   render() {
     return (
         <div>
-          <Button variant="light">View Portfolio</Button>
+          <MDBBtn color="info" onClick={this.handleClick}>Learn More <FontAwesomeIcon icon={['fa', 'book-open']}/></MDBBtn>
         </div>
     );
+  
+  }
+
 }
 
 export default PortfolioButton 

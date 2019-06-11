@@ -14,7 +14,8 @@ import {
   faQuoteLeft,
   faSquare,
   faCheckSquare,
-  faRocket
+  faRocket,
+  faBookOpen
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -25,7 +26,8 @@ library.add(
   faQuoteLeft,
   faSquare,
   faCheckSquare,
-  faRocket
+  faRocket,
+  faBookOpen
 )
 
 

@@ -1,17 +1,36 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap"
-import { MDBMask, MDBView } from "mdbreact";
+import { MDBMask, MDBView, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import campPreview from "../../assets/page-images/camp-wanna-preview.png";
 import readingPreview from "../../assets/page-images/reading-preview.png";
 import brewsPreview from "../../assets/page-images/brews-preview.png";
 import mongoPreview from "../../assets/page-images/mongo-preview.png";
 import friendPreview from "../../assets/page-images/friend-preview.png";
 import blockPreview from "../../assets/page-images/block-preview.png";
+import PortfolioButton from "../PortfolioButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.css";
-
+ 
+ 
 
 class ReactPortfolio extends Component {
+
+    state = {
+        modal0: false,
+        modal1: false,
+        modal2: false,
+        modal3: false,
+        modal4: false,
+        modal5: false, 
+        modal6: false
+    }
+
+    toggle = num => () => {
+        let modalNum = 'modal' + num
+        this.setState({
+            [modalNum]: !this.state[modalNum]
+        });
+    }
 
     render() {
       return(
@@ -24,9 +43,21 @@ class ReactPortfolio extends Component {
                         className="img-fluid"
                         alt="Camp Wanna Screenshot"
                     />
-                    <MDBMask className="flex-center" overlay="white-strong">
-                        <a rel="noopener noreferrer" className="text-center" href="https://mshuster4.github.io/Giftastic/"><p>Launch Giftastic <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
-                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                    <MDBMask overlay="white-strong" className="text-center">
+                        <Row>
+                            <Col sm={12}>
+                                <h5 className="text-center">Block Party</h5>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={12}>
+                              <PortfolioButton
+                                onClick = {this.toggle(0)}
+                              />
+                              <a rel="noopener noreferrer" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>View Github <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                              <a rel="noopener noreferrer" href="https://mshuster4.github.io/Giftastic/"><p>Launch Demo <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
+                            </Col>
+                        </Row>
                     </MDBMask>
                 </MDBView>
               </Col>
@@ -37,9 +68,9 @@ class ReactPortfolio extends Component {
                         className="img-fluid"
                         alt="Reading Wishlist Screenshot"
                     />
-                    <MDBMask className="flex-center" overlay="white-strong">
+                    <MDBMask overlay="white-strong">
                         <a rel="noopener noreferrer" className="text-center" href="https://mshuster4.github.io/Giftastic/"><p>Launch Giftastic <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
-                                <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                        <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
                     </MDBMask>
                 </MDBView>
               </Col>
@@ -53,6 +84,9 @@ class ReactPortfolio extends Component {
                     <MDBMask className="flex-center" overlay="white-strong">
                         <a rel="noopener noreferrer" className="text-center" href="https://mshuster4.github.io/Giftastic/"><p>Launch Giftastic <FontAwesomeIcon icon={['fa', 'rocket']}/></p></a>
                                 <a rel="noopener noreferrer" className="text-center" href="https://github.com/mshuster4/Giftastic" target="_blank"><p>Source Code <FontAwesomeIcon icon={['fab', 'github']} /></p></a>
+                                  <PortfolioButton
+                            onClick = {this.toggle(1)}
+                        />
                     </MDBMask>
                 </MDBView>
               </Col>
@@ -95,7 +129,23 @@ class ReactPortfolio extends Component {
                         </MDBMask>
                   </MDBView>
                 </Col>
-               </Row>  
+               </Row>
+               <MDBModal isOpen={this.state.modal0} toggle={this.toggle(0)}>
+                  <MDBModalHeader toggle={this.toggle(0)}>MDBModal title</MDBModalHeader>
+                        <MDBModalBody>
+                        this is modal0
+                        </MDBModalBody>
+                        <MDBModalFooter>
+                        </MDBModalFooter>
+              </MDBModal>
+              <MDBModal isOpen={this.state.modal1} toggle={this.toggle(1)}>
+                  <MDBModalHeader toggle={this.toggle(1)}>MDBModal title</MDBModalHeader>
+                        <MDBModalBody>
+                        this is modal1
+                        </MDBModalBody>
+                        <MDBModalFooter>
+                        </MDBModalFooter>
+              </MDBModal>    
             </Container>
         );
     }
