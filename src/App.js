@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import ReactPortfolio from "./components/ReactPortfolio";
+import AboutMe from "./components/AboutMe";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
