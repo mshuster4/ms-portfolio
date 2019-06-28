@@ -38,7 +38,7 @@ class App extends Component {
   return (
       <div>
         <NavBar></NavBar>
-        <ReactPortfolio></ReactPortfolio>
+        <Landing></Landing>
       </div>
     );
   }

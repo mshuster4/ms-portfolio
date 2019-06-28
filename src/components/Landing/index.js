@@ -10,7 +10,7 @@ class Landing extends Component {
         return (
             <Container fluid={true} className="landing-container">
                 <Row>
-                    <Col sm={6}>
+                    <Col md={4} lg={6}>
                         <div className="landing-text text-left">
                             <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
                                 <p>Hello.</p>
@@ -23,9 +23,11 @@ class Landing extends Component {
                             </Animated>
                         </div>
                     </Col>
-                    <Col sm={6}>
+                    <Col md={8} lg={6}>
                       <div className="bg-image"></div>
                     </Col>
+                </Row>
+                <Row>
                 </Row>
             </Container>
         )

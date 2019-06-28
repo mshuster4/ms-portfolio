@@ -1,17 +1,15 @@
+.landing-container {
+    min-height: 96vh;    
+}
 
 .bg-image {
-    background-image: url("../../assets/page-images/landing-page-img.png");
-    height: 94vh;
-    position: bottom right;
+    background-image: url("../../assets/page-images/landing-page-final.png");
+    background-size: contain;
+    min-height: 94vh;
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 100% 90%;
 }
 
-.landing-text {
-    padding-left: 80px;
-    margin-top: 4rem;
-}
 
 .portfolio-button {
     padding-left: 80px;
