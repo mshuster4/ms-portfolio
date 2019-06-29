@@ -31,6 +31,7 @@ class Portfolio extends Component {
                         description={projects[0].description}
                         imageOne={blockScreenOne}
                         imageTwo={blockScreenTwo}
+                        techsUsed={projects[0].techsUsed}
                     />
                     </PortfolioImage>
                 </Col>
