@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import ReactPortfolio from "./components/ReactPortfolio";
+import Portfolio from "./pages/Portfolio"
 import AboutMe from "./components/AboutMe";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -38,7 +39,7 @@ class App extends Component {
   return (
       <div>
         <NavBar></NavBar>
-        <Landing></Landing>
+        <Portfolio></Portfolio>
       </div>
     );
   }

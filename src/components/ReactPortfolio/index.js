@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap"
-import { MDBMask, MDBView, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBMask, MDBView, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import campPreview from "../../assets/page-images/camp-wanna-preview.png";
 import readingPreview from "../../assets/page-images/reading-preview.png";
 import brewsPreview from "../../assets/page-images/brews-preview.png";
 import mongoPreview from "../../assets/page-images/mongo-preview.png";
 import friendPreview from "../../assets/page-images/friend-preview.png";
 import blockPreview from "../../assets/page-images/block-preview.png";
+import blockScreenOne from "../../assets/page-images/blockparty-shot-one.png";
+import blockScreenTwo from "../../assets/page-images/blockparty-shot-two.png";
 import PortfolioButton from "../PortfolioButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./style.css";
@@ -130,16 +132,47 @@ class ReactPortfolio extends Component {
                   </MDBView>
                 </Col>
                </Row>
-               <MDBModal isOpen={this.state.modal0} toggle={this.toggle(0)}>
-                  <MDBModalHeader toggle={this.toggle(0)}>MDBModal title</MDBModalHeader>
+               <MDBModal size="lg" isOpen={this.state.modal0} toggle={this.toggle(0)}>
+                  <MDBModalHeader toggle={this.toggle(0)}>Block Party</MDBModalHeader>
                         <MDBModalBody>
-                        this is modal0
-                        </MDBModalBody>
-                        <MDBModalFooter>
-                        </MDBModalFooter>
+                            <Row>
+                              <Col sm={12}>
+                                   <MDBCarousel
+                                        activeItem={1}
+                                        length={2}
+                                        showControls={true}
+                                        showIndicators={true}
+                                        className="z-depth-1"
+                                    >
+                                     <MDBCarouselInner>
+                                        <MDBCarouselItem itemId="1">
+                                            <MDBView>
+                                                <img
+                                                    className="d-block w-100"
+                                                    src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                                                    alt="First slide"
+                                                />
+                                           </MDBView>
+                                       </MDBCarouselItem>
+                                    <MDBCarouselItem itemId="2">
+                                        <MDBView>
+                                        <img
+                                            className="d-block w-100"
+                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                            alt="Second slide"
+                                        />
+                                        </MDBView>
+                                          </MDBCarouselItem>
+                                        </MDBCarouselInner>
+                                   </MDBCarousel>
+                                     </Col>
+                                    </Row>
+                                </MDBModalBody>
+                            <MDBModalFooter>
+                    </MDBModalFooter>
               </MDBModal>
               <MDBModal isOpen={this.state.modal1} toggle={this.toggle(1)}>
-                  <MDBModalHeader toggle={this.toggle(1)}>MDBModal title</MDBModalHeader>
+                  <MDBModalHeader toggle={this.toggle(1)}>Reading Wishlist</MDBModalHeader>
                         <MDBModalBody>
                         this is modal1
                         </MDBModalBody>
