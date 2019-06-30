@@ -6,15 +6,21 @@ import PortfolioImage from "../components/PortfolioImage"
 import blockPreview from "../assets/page-images/block-party-preview.png";
 import blockScreenOne from "../assets/page-images/block-party-shot-one.png";
 import blockScreenTwo from "../assets/page-images/block-party-shot-two.png";
-import campPreview from "../assets/page-images/camp-wanna-preview.png";
+import campPreview from "../assets/page-images/camp-preview.png";
+import campScreenOne from "../assets/page-images/camp-shot-one.png";
+import campScreenTwo from "../assets/page-images/camp-shot-two.png";
 import readingPreview from "../assets/page-images/reading-preview.png";
 import readingScreenOne from "../assets/page-images/reading-shot-one.png"
 import readingScreenTwo from "../assets/page-images/reading-shot-two.png"
 import friendPreview from "../assets/page-images/friend-preview.png";
-import friendScreenOne from "../assets/page-images/friend-shot-one/png"
+import friendScreenOne from "../assets/page-images/friend-shot-one.png"
 import friendScreenTwo from "../assets/page-images/friend-shot-two.png"
 import brewsPreview from "../assets/page-images/brews-preview.png";
+import brewsScreenOne from "../assets/page-images/brews-shot-one.png";
+import brewsScreenTwo from "../assets/page-images/brews-shot-two.png";
 import mongoPreview from "../assets/page-images/mongo-preview.png";
+import mongoScreenOne from "../assets/page-images/mongo-shot-one.png";
+import mongoScreenTwo from "../assets/page-images/mongo-shot-two.png";
 import projects from "../projects.json";
 
 class Portfolio extends Component {
@@ -85,8 +91,8 @@ class Portfolio extends Component {
                         title={projects[3].title}
                         description={projects[3].description}
                         tagline={projects[3].tagline}
-                        imageOne={friendScreenOne}
-                        imageTwo={friendScreenTwo}
+                        imageOne={campScreenOne}
+                        imageTwo={campScreenTwo}
                         techsUsed={projects[3].techsUsed}
                         
                       />
@@ -104,8 +110,8 @@ class Portfolio extends Component {
                       title={projects[4].title}
                       description={projects[4].description}
                       tagline={projects[4].tagline}
-                      imageOne={friendScreenOne}
-                      imageTwo={friendScreenTwo}
+                      imageOne={brewsScreenOne}
+                      imageTwo={brewsScreenTwo}
                       techsUsed={projects[4].techsUsed}
                       
                     />
@@ -122,8 +128,8 @@ class Portfolio extends Component {
                       title={projects[5].title}
                       description={projects[5].description}
                       tagline={projects[5].tagline}
-                      imageOne={friendScreenOne}
-                      imageTwo={friendScreenTwo}
+                      imageOne={mongoScreenOne}
+                      imageTwo={mongoScreenTwo}
                       techsUsed={projects[5].techsUsed}
                       
                     />

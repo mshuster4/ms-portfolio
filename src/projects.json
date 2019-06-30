@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "title": "Block Party",
         "tagline": "Neighborhood bulletin board for buying, selling, and promoting",
         "description": "My team was tasked with creating a CRUD application using a SQL database.  We decided to create an app for neighborhood members to serve as both users and moderators of their own community forum.  Block Party features three distinct message boards: Karma Angles for offering goods/services, Choosy Beggars for requesting goods/services, and Nosey Neighbors for promoting events.  To accomplish this, we created three different tables within one database and used Handlebars.js to display users’ posts on individual pages.  For this project, my role was to design the entire UI as well as write all Frontend HTML/CSS/JavaScript.",
@@ -8,12 +7,42 @@
     
     },
     {
-        "id": 2,
         "title": "Reading Wishlist",
         "tagline": "Search engine for discovering and saving books",
         "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
         "techsUsed": ["Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
 
+    },
+    {
+        "title": "Reading Wishlist",
+        "tagline": "Search engine for discovering and saving books",
+        "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
+        "techsUsed": ["Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
+
+    },
+    {
+ 
+        "title": "Reading Wishlist",
+        "tagline": "Search engine for discovering and saving books",
+        "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
+        "techsUsed": ["Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
+
+    },
+    {
+    
+        "title": "Reading Wishlist",
+        "tagline": "Search engine for discovering and saving books",
+        "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
+        "techsUsed": ["Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
+
+    },
+    {
+        
+        "title": "Reading Wishlist",
+        "tagline": "Search engine for discovering and saving books",
+        "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
+        "techsUsed": ["Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
 
     }
+
 ]
