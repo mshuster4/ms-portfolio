@@ -114,7 +114,8 @@ class Portfolio extends Component {
                       imageTwo={brewsScreenTwo}
                       techsUsed={projects[4].techsUsed}
                       
-                    />
+                    >
+                    </PortfolioModal>
                     </PortfolioImage>
                 </Col>
 

@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
-import ReactPortfolio from "./components/ReactPortfolio";
 import Portfolio from "./pages/Portfolio"
 import AboutMe from "./components/AboutMe";
 import { library } from '@fortawesome/fontawesome-svg-core';

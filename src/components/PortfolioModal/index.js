@@ -31,8 +31,8 @@ class PortfolioModal extends Component {
         <PortfolioButton
             onClick = {this.toggle}
         />
-            <MDBModal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
-                <MDBModalHeader toggle={this.toggle}>
+            <MDBModal size="lg" isOpen={this.state.modal}>
+                <MDBModalHeader>
                 <h1>{this.state.title}</h1>
                 <h3>{this.state.tagline}</h3>
                 </MDBModalHeader>
