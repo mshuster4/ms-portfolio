@@ -11,9 +11,10 @@ class PortfolioModal extends Component {
     state = {
         modal: false,
         title: this.props.title,
-        description: this.props.description,
+        tagline: this.props.tagline,
         imageOne: this.props.imageOne,
         imageTwo: this.props.imageTwo,
+        description: this.props.description,
         techsUsed: this.props.techsUsed
     }
 
@@ -30,14 +31,17 @@ class PortfolioModal extends Component {
         <PortfolioButton
             onClick = {this.toggle}
         />
-            <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-                <MDBModalHeader toggle={this.toggle}>{this.state.title}</MDBModalHeader>
+            <MDBModal size="lg" isOpen={this.state.modal} toggle={this.toggle}>
+                <MDBModalHeader toggle={this.toggle}>
+                <h1>{this.state.title}</h1>
+                <h3>{this.state.tagline}</h3>
+                </MDBModalHeader>
                 <MDBModalBody>
                     <ModalImages
                         imageOne = {this.state.imageOne}
                         imageTwo= {this.state.imageTwo}
                     />
-                    {this.state.description}
+                    <p>{this.state.description}</p>
                     <ModalList
                         techsUsed={this.state.techsUsed}
                     />

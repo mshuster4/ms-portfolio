@@ -4,10 +4,12 @@ import PortfolioContainer from "../components/PortfolioContainer"
 import PortfolioModal from "../components/PortfolioModal";
 import PortfolioImage from "../components/PortfolioImage"
 import blockPreview from "../assets/page-images/block-preview.png";
-import blockScreenOne from "../assets/page-images/blockparty-shot-one.png";
-import blockScreenTwo from "../assets/page-images/blockparty-shot-two.png";
+import blockScreenOne from "../assets/page-images/block-party-shot-one.png";
+import blockScreenTwo from "../assets/page-images/block-party-shot-two.png";
 import campPreview from "../assets/page-images/camp-wanna-preview.png";
 import readingPreview from "../assets/page-images/reading-preview.png";
+import readingScreenOne from "../assets/page-images/reading-shot-one.png"
+import readingScreenTwo from "../assets/page-images/reading-shot-two.png"
 import friendPreview from "../assets/page-images/friend-preview.png";
 import brewsPreview from "../assets/page-images/brews-preview.png";
 import mongoPreview from "../assets/page-images/mongo-preview.png";
@@ -29,6 +31,7 @@ class Portfolio extends Component {
                     <PortfolioModal
                         title={projects[0].title}
                         description={projects[0].description}
+                        tagline={projects[0].tagline}
                         imageOne={blockScreenOne}
                         imageTwo={blockScreenTwo}
                         techsUsed={projects[0].techsUsed}
@@ -44,7 +47,10 @@ class Portfolio extends Component {
                    <PortfolioModal
                         title={projects[1].title}
                         description={projects[1].description}
-                        image={blockScreenOne}
+                        tagline={projects[1].tagline}
+                        imageOne={readingScreenOne}
+                        imageTwo={readingScreenTwo}
+                        techsUsed={projects[1].techsUsed}
                     />
                   </PortfolioImage>
                 </Col>
