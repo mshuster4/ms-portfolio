@@ -3,11 +3,11 @@ import React from "react";
 function AboutText () {
     return (
         <div>
-          <p>
-            I am a Full-Stack Web Developer with a passion for design.  I strive to create my clients the perfect aesthetic for their brand and make their visions come to life online In 2019, I sucessfully completed University of California, San Diego’s Full Stack Web Development Bootcamp.  Attending this program taught me how to develope both the client and server side.
-            Spending ten years employed in the Hospitality industry gave me experience in remaining organized and maintaining attention to detail while facing deadlines in high pressure work environments. 
-            In my freetime, I enjoy horseback riding, attending concerts and spending time with my dog, Yoshi.
-          </p>       
+          <p>Currrently living in San Diego, CA but originally from Minneapolis, MN.</p>
+           <p>I have an adorable dog named Yoshi.</p>
+          <p>When I am not coding or designing, I am probably reading a novel or playing pinball at a local dive bar.</p>
+          <h5>Need help with your brand or website? I am available for hire</h5>
+          <button>Say Hello</button> <button>View My Resume</button><button>Check Out My Work</button>
         </div>
     )
 }
