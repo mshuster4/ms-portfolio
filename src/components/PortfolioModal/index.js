@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {  MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
+import { MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import PortfolioButton from "../PortfolioButton";
 import ModalImages from "../ModalImages";
 import  ModalList from "../ModalList";
@@ -15,6 +15,7 @@ class PortfolioModal extends Component {
         imageOne: this.props.imageOne,
         imageTwo: this.props.imageTwo,
         description: this.props.description,
+        role: this.props.role,
         techsUsed: this.props.techsUsed
     }
 
@@ -31,10 +32,10 @@ class PortfolioModal extends Component {
         <PortfolioButton
             onClick = {this.toggle}
         />
-            <MDBModal size="lg" isOpen={this.state.modal}>
+            <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="fluid" position="top">
                 <MDBModalHeader>
                 <h1>{this.state.title}</h1>
-                <h3>{this.state.tagline}</h3>
+                <h6>{this.state.tagline}</h6>
                 </MDBModalHeader>
                 <MDBModalBody>
                     <ModalImages
@@ -42,6 +43,7 @@ class PortfolioModal extends Component {
                         imageTwo= {this.state.imageTwo}
                     />
                     <p>{this.state.description}</p>
+                    <p>{this.state.role}</p>
                     <ModalList
                         techsUsed={this.state.techsUsed}
                     />

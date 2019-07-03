@@ -36,14 +36,15 @@ class Portfolio extends Component {
                         alt="Block Party Preview"
                     >
                         Block Party
-                    <PortfolioModal
-                        title={projects[0].title}
-                        description={projects[0].description}
-                        tagline={projects[0].tagline}
-                        imageOne={blockScreenOne}
-                        imageTwo={blockScreenTwo}
-                        techsUsed={projects[0].techsUsed}
-                    />
+                     <PortfolioModal
+                      title={projects[0].title}
+                      description={projects[0].description}
+                      role={projects[0].role}
+                      tagline={projects[0].tagline}
+                      imageOne={blockScreenOne}
+                      imageTwo={blockScreenTwo}
+                      techsUsed={projects[0].techsUsed}
+                      />
                     </PortfolioImage>
                 </Col>
 
@@ -52,7 +53,6 @@ class Portfolio extends Component {
                     img={readingPreview}
                     alt="Reading Wishlist Preview"
                   >
-                    Reading Wishlist
                    <PortfolioModal
                         title={projects[1].title}
                         description={projects[1].description}
@@ -61,6 +61,7 @@ class Portfolio extends Component {
                         imageTwo={readingScreenTwo}
                         techsUsed={projects[1].techsUsed}
                     />
+                    Reading Wishlist
                   </PortfolioImage>
                 </Col>
 
