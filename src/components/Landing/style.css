@@ -1,24 +1,7 @@
-.landing-container {
-    min-height: 96vh;    
+.landing-image {
+    align-self: flex-end;
 }
 
-.bg-image {
-    background-image: url("../../assets/page-images/landing-page-final.png");
-    background-size: contain;
-    min-height: 94vh;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-}
-
-
-.portfolio-button {
-    padding-left: 80px;
-}
-
-p {
-    font-size: 2rem;
-    font-family: objektiv-mk1,sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: black;
+.landing-text {
+    height: 20vh;
 }

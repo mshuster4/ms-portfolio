@@ -11,20 +11,26 @@ class About extends Component {
     render() {
         return (
             <AboutContainer>
-
                 <Row>
-                    <Col sm={4}>
-                        <AboutImage/>
-                    </Col>
-                    <Col sm={8}>
-                        <AboutText/>
+                  <Col sm={12}>
+                    <AboutCard>
+                      <Row>
+                        <Col sm={{ span: 4, offset: 1}}>
+                          <AboutImage/>
+                        </Col>
+                       <Col sm={6}>
+                          <AboutText/>
+                       </Col>
+                       <Col sm={1}></Col>
+                      </Row>
+                      </AboutCard>
                     </Col>
                 </Row>
                 <Row>
-                    <Col sm={6}>
+                    <Col>
                         <DevelopmentSkills/>
                     </Col>
-                    <Col sm={6}>
+                    <Col>
                         <DesignSkills/>
                     </Col>
                 </Row>

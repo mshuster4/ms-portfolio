@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'react-bootstrap/Image'
-import Headshot from "../../assets/page-images/headshot.jpg";
+import Headshot from "../../assets/page-images/landing-page-final.png";
 import "./style.css"
 
 function AboutImage() {
