@@ -36,7 +36,7 @@ library.add(
 class App extends Component {
   render() {
   return (
-        <Landing></Landing>
+        <About></About>
     );
   }
 

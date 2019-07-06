@@ -12,7 +12,7 @@ class Landing extends Component {
         return (
             <Container className="landing-container d-flex">
                 <Row>
-                    <Col xs={12} col md={6}>
+                    <Col sm={12} md={6} lg={6}>
                         <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
                             <h2>Hello.</h2>
                         </Animated>
@@ -23,7 +23,7 @@ class Landing extends Component {
                             <h2>I am a Web Developer and UI Designer.</h2>
                         </Animated>
                     </Col>
-                    <Col sm={12} md={6} className="d-flex">
+                    <Col sm={12} md={6}  lg={6} className="d-flex">
                         <Image src={LandingImg} className="img-fluid landing-image" alt="image"></Image>
                     </Col>
                 </Row>
