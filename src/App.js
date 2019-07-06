@@ -1,11 +1,12 @@
-import React, {Component} from 'react';
-import Container from 'react-bootstrap/Container';
+import React, { Component}  from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavBar from "./components/NavBar";
 import Landing from "./components/Landing";
 import Portfolio from "./pages/Portfolio"
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -36,7 +37,10 @@ library.add(
 class App extends Component {
   render() {
   return (
-        <About></About>
+      <div>
+        <NavBar/>
+        <Landing/>
+      </div>
     );
   }
 

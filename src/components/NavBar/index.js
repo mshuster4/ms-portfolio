@@ -1,29 +1,43 @@
 import React, { Component } from "react";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Link } from "react-router-dom";
 import logo from "../../assets/page-images/ms-logo.png";
-import Navbar from 'react-bootstrap/Navbar';
-import "./style.css"
+import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import "./style.css";
 
-class NavBar extends Component {
+function NavBar() {
 
-    render() {
-        return (
-            <Navbar bg="light" variant="light">
-                <Container fluid={true}>
-                        <Navbar.Brand href="#home">
-                        <img
-                            src={logo}
-                            id="logo"
-                            className="d-inline-block align-top"
-                            alt="logo"
-                        />
-                        </Navbar.Brand>
-                </Container>
-            </Navbar>
-        );
-    }
+    return (
+        <Navbar bg="light" variant="dark">
+          <Container className="nav-container" fluid>
+            <Row>
+              <Col>
+                <Navbar.Brand collapseOnSelect expand="md" href="#home">
+                  <Link to="#">
+                    <img
+                        alt="logo"
+                        src={logo}
+                        className="d-inline-block align-top"
+                    />
+                  </Link>
+                </Navbar.Brand>
+              </Col>
+              <Col size="sm-12 md-8" className="text-center">
+                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                      <Nav className="ml-auto">
+                        <Link to="/" className="main-nav nav-link">Home</Link>
+                        <Nav.Link to="/Profile" className="main-nav">Profile</Nav.Link>
+                        <Nav.Link to="/Resources" className="main-nav">Resources</Nav.Link>
+                        <Nav.Link to="/About" className="main-nav">About Us</Nav.Link>
+                      </Nav>
+                   </Navbar.Collapse>
+               </Col>
+             </Row>
+          </Container>
+        </Navbar>
+
+    );
+
 }
 
 export default NavBar
