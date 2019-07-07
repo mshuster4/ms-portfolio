@@ -1,7 +1,37 @@
-.landing-image {
-    align-self: flex-end;
+.landing-container {
+    height: 94%;
 }
 
-.landing-text {
-    height: 20vh;
+@media only screen and (max-width: 600px) {
+    .landing-container {
+        height: 86%;
+    }
+
+} 
+
+@media only screen and (min-width: 600px) {
+    .landing-container {
+        height: 86%;
+    }
+   
+} 
+
+@media only screen and (min-width: 768px) {
+    .landing-container {
+        height: 95%;
+    }    
+   
+} 
+
+
+@media only screen and (min-width: 992px) {
+    .landing-container {
+        height: 96%;
+    }    
+} 
+
+@media only screen and (min-width: 1200px) {
+    .landing-container {
+        height: 95%;
+    }    
 }

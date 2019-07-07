@@ -7,32 +7,25 @@ import "./style.css";
 function NavBar() {
 
     return (
-        <Navbar bg="light" variant="dark">
+        <Navbar collapseOnSelect expand="md" bg="light" variant="light">
           <Container className="nav-container" fluid>
-            <Row>
-              <Col>
-                <Navbar.Brand collapseOnSelect expand="md" href="#home">
-                  <Link to="#">
+            <Navbar.Brand >
+                <Nav.Link to="#">
                     <img
                         alt="logo"
                         src={logo}
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top logo-img"
                     />
-                  </Link>
-                </Navbar.Brand>
-              </Col>
-              <Col size="sm-12 md-8" className="text-center">
-                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className="ml-auto">
-                        <Link to="/" className="main-nav nav-link">Home</Link>
-                        <Nav.Link to="/Profile" className="main-nav">Profile</Nav.Link>
-                        <Nav.Link to="/Resources" className="main-nav">Resources</Nav.Link>
-                        <Nav.Link to="/About" className="main-nav">About Us</Nav.Link>
-                      </Nav>
-                   </Navbar.Collapse>
-               </Col>
-             </Row>
+                </Nav.Link>
+            </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link className="nav">Portfolio</Nav.Link>
+                        <Nav.Link className="nav">About</Nav.Link>
+                        <Nav.Link className="nav">Contact</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
           </Container>
         </Navbar>
 

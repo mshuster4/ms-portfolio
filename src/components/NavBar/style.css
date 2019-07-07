@@ -1,5 +1,8 @@
-img#logo {
-    height: 35px;
-    padding-left: 15px;
-    width: auto;
+.logo-img {
+    width: 14%;
+    height: auto;
+}
+
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+    padding: 0px;
 }
