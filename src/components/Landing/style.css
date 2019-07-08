@@ -1,43 +1,46 @@
-.landing-container {
-    margin-top: 1rem;
-    text-align: center;
+.portfolio-button {
+    padding: 0px;
 }
 
-.bg-image {
-    background-image: url("../../assets/page-images/landing-page-final.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: right;
-}
+@media (min-width: 320px) { 
 
-@media only screen and (max-width: 600px) {
-    .landing-container {
-        margin-top: 1rem;
-        text-align: center;
+    .bg-image {
+        height: 57vh;
+        background-image: url("../../assets/page-images/landing-page-final.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: right;
     }
 
     .h1-responsive {
         font-size: medium;
     }
 
-} 
-
-@media only screen and (min-width: 600px) {
-
-} 
-
-@media only screen and (min-width: 768px) {
-
-} 
-
-
-@media only screen and (min-width: 992px) {
-   
-} 
-
-@media only screen and (min-width: 1200px) {
-   
+    .landing-container {
+        text-align: center;
+        height: 100%;
+        justify-content: space-evenly;
+    }
 
 }
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+   
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+}
+
+@media (min-width: 1200px) { 
+
+}
+
+
 

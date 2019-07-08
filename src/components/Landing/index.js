@@ -10,7 +10,7 @@ import "./style.css"
 class Landing extends Component {
     render() {
         return (
-            <Container className="landing-container d-flex">
+            <Container className="landing-container d-flex flex-column">
               <Row>
                 <Col xs={12} sm={12} md={6} lg={6} xl={5}>
                     <Animated className="text-animation" animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
@@ -26,9 +26,10 @@ class Landing extends Component {
                         <button className="landing-text portfolio-button">View Portfolio</button>
                     </Animated>
                 </Col> 
+                <Col></Col>
               </Row>
               <Row>
-                <Col>
+                <Col xs={12}>
                     <div className="bg-image"></div>
                 </Col>
               </Row>

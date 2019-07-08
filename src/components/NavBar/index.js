@@ -7,20 +7,30 @@ import "./style.css";
 function NavBar() {
 
     return (
-        <Navbar bg="light" variant="light" className="pt-0 pb-0 pr-0 pl-0 navbar">
-          <Container className="d-flex justify-content-center" fluid>
-                <Nav.Link className="d-none">
+        <div class="nav-bg d-sm-flex">
+            <Nav className="d-none d-sm-inline-flex">
+              <Nav.Item>
+                <Nav.Link>
                     <img
                         alt="logo"
                         src={logo}
                         width="30"
                     />
-                </Nav.Link>
-                <Nav.Link className="nav">Portfolio</Nav.Link>
-                <Nav.Link className="nav">About</Nav.Link>
-                <Nav.Link className="nav">Contact</Nav.Link>
-          </Container>
-        </Navbar>
+                    </Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Nav className="d-sm-inline-flex ml-sm-auto">
+                <Nav.Item>
+                  <Nav.Link className="nav">Portfolio</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className="nav">About</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className="nav">Contact</Nav.Link>
+                </Nav.Item>
+            </Nav>
+      </div>
 
     );
 
