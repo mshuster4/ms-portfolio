@@ -10,31 +10,28 @@ import "./style.css"
 class Landing extends Component {
     render() {
         return (
-            <Container className="landing-container d-flex" fluid>
-                <Row>
-                    <Col xs={12} sm={7} md={6} lg={6}>
-                        <Row>
-                            <Col sm={12}>
-                                <Animated animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
-                                    <h2>Hello.</h2>
-                                </Animated>
-                            </Col>
-                            <Col sm={12}>
-                                <Animated animationIn="fadeIn" animationInDelay={2000} isViibile={true}>
-                                    <h2>My name is Marguerite Shuster.</h2>
-                                </Animated>
-                            </Col>
-                            <Col sm={12}>
-                                <Animated animationIn="fadeIn" animationInDelay={3000} isViibile={true}>
-                                    <h2>I am a Web Developer and UI Designer.</h2>
-                                </Animated>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col sm={5} md={6} lg={6} className="align-self-end">
-                        <Image src={LandingImg} className="landing-img img-fluid"></Image>
-                    </Col>
-                </Row>
+            <Container className="landing-container d-flex">
+              <Row>
+                <Col xs={12} sm={12} md={6} lg={6} xl={5}>
+                    <Animated className="text-animation" animationIn="fadeIn" animationInDelay={1000} isViibile={true}>
+                        <h1 className="h1-responsive landing-text">Hello.</h1>
+                    </Animated>
+                    <Animated className="text-animation" animationIn="fadeIn" animationInDelay={2000} isViibile={true}>
+                        <h1 className="h1-responsive landing-text">My name is Marguerite Shuster.</h1>
+                    </Animated>
+                    <Animated className="text-animation" animationIn="fadeIn" animationInDelay={3000} isViibile={true}>
+                        <h1 className="h1-responsive landing-text">I am a Web Developer and UI Designer.</h1>
+                    </Animated>
+                    <Animated className="text-animation" animationIn="fadeIn" animationInDelay={4000} isViibile={true}>
+                        <button className="landing-text portfolio-button">View Portfolio</button>
+                    </Animated>
+                </Col> 
+              </Row>
+              <Row>
+                <Col>
+                    <div className="bg-image"></div>
+                </Col>
+              </Row>
             </Container>
         )
     }

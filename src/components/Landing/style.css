@@ -1,37 +1,43 @@
 .landing-container {
-    height: 94%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.bg-image {
+    background-image: url("../../assets/page-images/landing-page-final.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: right;
 }
 
 @media only screen and (max-width: 600px) {
     .landing-container {
-        height: 86%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .h1-responsive {
+        font-size: medium;
     }
 
 } 
 
 @media only screen and (min-width: 600px) {
-    .landing-container {
-        height: 86%;
-    }
-   
+
 } 
 
 @media only screen and (min-width: 768px) {
-    .landing-container {
-        height: 95%;
-    }    
-   
+
 } 
 
 
 @media only screen and (min-width: 992px) {
-    .landing-container {
-        height: 96%;
-    }    
+   
 } 
 
 @media only screen and (min-width: 1200px) {
-    .landing-container {
-        height: 95%;
-    }    
+   
+
 }
+

@@ -7,25 +7,18 @@ import "./style.css";
 function NavBar() {
 
     return (
-        <Navbar collapseOnSelect expand="md" bg="light" variant="light">
-          <Container className="nav-container" fluid>
-            <Navbar.Brand >
-                <Nav.Link to="#">
+        <Navbar bg="light" variant="light" className="pt-0 pb-0 pr-0 pl-0 navbar">
+          <Container className="d-flex justify-content-center" fluid>
+                <Nav.Link className="d-none">
                     <img
                         alt="logo"
                         src={logo}
-                        className="d-inline-block align-top logo-img"
+                        width="30"
                     />
                 </Nav.Link>
-            </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ml-auto">
-                        <Nav.Link className="nav">Portfolio</Nav.Link>
-                        <Nav.Link className="nav">About</Nav.Link>
-                        <Nav.Link className="nav">Contact</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
+                <Nav.Link className="nav">Portfolio</Nav.Link>
+                <Nav.Link className="nav">About</Nav.Link>
+                <Nav.Link className="nav">Contact</Nav.Link>
           </Container>
         </Navbar>
 
