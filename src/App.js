@@ -1,9 +1,7 @@
 import React, { Component}  from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import NavBar from "./components/NavBar";
-import Landing from "./components/Landing";
+import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -37,10 +35,7 @@ library.add(
 class App extends Component {
   render() {
   return (
-      <div>
-        <NavBar/>
         <Landing/>
-      </div>
     );
   }
 

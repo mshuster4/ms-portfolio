@@ -1,0 +1,24 @@
+.landing-img {
+    height: 100vh;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 650px) {
+  .landing-img {
+        height: 100vh;
+        background-size: 100% auto;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+    .landing-img {
+          height: 100vh;
+          background-size: 100% auto;
+          background-position: bottom right;
+          background-repeat: no-repeat;
+    }
+  }

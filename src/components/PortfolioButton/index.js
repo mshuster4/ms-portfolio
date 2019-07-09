@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { MDBBtn } from 'mdbreact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  "./style.css"
 
-class PortfolioButton extends React.Component {
+class PortfolioButton extends Component {
 
   handleClick = () => {
     this.props.onClick();
@@ -11,9 +11,7 @@ class PortfolioButton extends React.Component {
 
    render() {
     return (
-        <div>
           <MDBBtn color="info" onClick={this.handleClick}>Learn More <FontAwesomeIcon icon={['fa', 'book-open']}/></MDBBtn>
-        </div>
     );
   
   }

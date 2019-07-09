@@ -3,6 +3,8 @@
     .nav-bg {
         color: white;
         border-bottom: solid 1px black;
+        height: 40px;
+        top: -40px;
         margin-bottom: 0.5rem;
     }
 
