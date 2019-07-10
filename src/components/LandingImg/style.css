@@ -1,24 +1,14 @@
 .landing-img {
     height: 100vh;
-    background-size: contain;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 568px) {
   .landing-img {
-        height: 100vh;
-        background-size: 100% auto;
+        background-size: 100% cover;
         background-position: bottom right;
         background-repeat: no-repeat;
   }
 }
-
-@media (min-width: 768px) {
-    .landing-img {
-          height: 100vh;
-          background-size: 100% auto;
-          background-position: bottom right;
-          background-repeat: no-repeat;
-    }
-  }
