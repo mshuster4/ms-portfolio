@@ -18,25 +18,4 @@ class Landing extends Component {
     }
 }
 
-
-/*
-class Landing extends Component {
-    
-    render() {
-        return (
-            <LandingContainer>
-                <div>
-                    <LandingText delay={1000}>Hello.</LandingText>
-                    <LandingText delay={2000}>My name is Marguerite Shuster.</LandingText>
-                    <LandingText delay={3000}>I am a Web Developer and UI Designer.</LandingText>
-                    <LandingButton></LandingButton>
-                </div>
-                <div>
-                    <LandingImg></LandingImg>
-                </div>
-            </LandingContainer>
-        );
-    }
-}
-*/
 export default Landing;

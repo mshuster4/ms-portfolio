@@ -5,7 +5,7 @@ import "./style.css"
 
 function LandingImg (props) {
 
-    const [ setWindowWidth ] = useState(window.innerWidth);
+    const [ windowWidth, setWindowWidth ] = useState(window.innerWidth);
 
     const imageURL = window.innerWidth >= 568 ? LandingImgLg : LandingImgSm;
 
