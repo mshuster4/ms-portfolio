@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { MDBMask, MDBView } from "mdbreact";
 import "./style.css";
 
@@ -16,7 +16,7 @@ function PortfolioImage(props) {
               <MDBMask overlay="white-strong" className="text-center">
                 <Row>
                     <Col sm={12}>
-                        <h5 className="text-center">{props.children}</h5>
+                       {props.children}
                     </Col>
                 </Row>
               </MDBMask>

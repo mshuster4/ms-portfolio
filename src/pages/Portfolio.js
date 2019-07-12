@@ -39,35 +39,100 @@ class Portfolio extends Component {
         techsUsed: ""
     }
 
-    toggle = () => {
-       console.log("clicked");
+    toggle = modalNumber => () => {
+    
+        if (modalNumber === 0) {
+          this.setState({
+            modal: !this.state.modal,
+            title: projects[0].title,
+            tagline: projects[0].tagline,
+            imageOne: blockScreenOne,
+            imageTwo: blockScreenTwo,
+            description: projects[0].description,
+            role: projects[0].role,
+            techsUsed: projects[0].techsUsed
+        });
+      }
+
+      else if (modalNumber === 1) {
+          this.setState({
+            modal: !this.state.modal,
+            title: projects[1].title,
+            tagline: projects[1].tagline,
+            imageOne: readingScreenOne,
+            imageTwo: readingScreenTwo,
+            description: projects[1].description,
+            role: projects[1].role,
+            techsUsed: projects[1].techsUsed
+        });
+      }
+
+      else if (modalNumber === 2) {
         this.setState({
-        modal: !this.state.modal,
-        title: projects[0].title,
-        tagline: projects[0].tagline,
-        imageOne: blockScreenOne,
-        imageTwo: blockScreenTwo,
-        description: projects[0].description,
-        role: projects[0].role,
-        techsUsed: projects[0].techsUsed
-      
-    });
-  }
+            modal: !this.state.modal,
+            title: projects[2].title,
+            tagline: projects[2].tagline,
+            imageOne: friendScreenOne,
+            imageTwo: friendScreenTwo,
+            description: projects[2].description,
+            role: projects[2].role,
+            techsUsed: projects[2].techsUsed
+        });
+      }
+
+      else if (modalNumber === 3) {
+          this.setState({
+            modal: !this.state.modal,
+            title: projects[3].title,
+            tagline: projects[3].tagline,
+            imageOne: campScreenOne,
+            imageTwo: campScreenTwo,
+            description: projects[3].description,
+            role: projects[3].role,
+            techsUsed: projects[3].techsUsed
+        });
+      }
+
+      else if (modalNumber === 4) {
+          this.setState({
+            modal: !this.state.modal,
+            title: projects[4].title,
+            tagline: projects[4].tagline,
+            imageOne: brewsScreenOne,
+            imageTwo: brewsScreenTwo,
+            description: projects[4].description,
+            role: projects[4].role,
+            techsUsed: projects[4].techsUsed
+        });
+      }
+
+      else {
+          this.setState({
+            modal: !this.state.modal,
+            title: projects[5].title,
+            tagline: projects[5].tagline,
+            imageOne: mongoScreenOne,
+            imageTwo: mongoScreenTwo,
+            description: projects[5].description,
+            role: projects[5].role,
+            techsUsed: projects[5].techsUsed
+        });
+      }
+    }
    
   render() {
       return (
         <PortfolioContainer>
             <Row className="align-self-center">
-
               <Col xs={12} md={6} lg={4}>
                     <PortfolioImage
                         img={blockPreview}
                         alt="Block Party Preview"
                     >
-                        Block Party
-                        <PortfolioButton
-                            onClick = {this.toggle}
-                          />
+                      <h5>Block Party</h5>
+                      <PortfolioButton
+                          onClick = {this.toggle(0)}
+                        />
                     </PortfolioImage>
                 </Col>
 
@@ -76,7 +141,10 @@ class Portfolio extends Component {
                     img={readingPreview}
                     alt="Reading Wishlist Preview"
                   >
-                    Reading Wishlist
+                    <h5>Reading Wishlist</h5>
+                     <PortfolioButton
+                        onClick = {this.toggle(1)}
+                      />
                   </PortfolioImage>
                 </Col>
 
@@ -85,8 +153,11 @@ class Portfolio extends Component {
                       img={friendPreview}
                       alt="Friend Finder Preview"
                   >
-                  Friend Finder
-                  </PortfolioImage>
+                    <h5>Friend Finder</h5>
+                      <PortfolioButton
+                        onClick = {this.toggle(2)}
+                      />
+                    </PortfolioImage>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
@@ -94,50 +165,60 @@ class Portfolio extends Component {
                         img={campPreview}
                         alt="Camp Wanna Preview"
                     >
-                        Camp Wannagetajob
-                    </PortfolioImage>
-
-                </Col>
-
-                <Col xs={12} md={6} lg={4}>
-                    <PortfolioImage
-                        img={brewsPreview}
-                        alt="Brews Beats Preview"
-                    >
-                      Brews and Beats
-                    </PortfolioImage>
-                </Col>
-
-                <Col xs={12} md={6} lg={4}>
-                    <PortfolioImage
-                        img={mongoPreview}
-                        alt="News Scraper Preview"
-                    >
-                      News Scraper
-                    </PortfolioImage>
-                </Col>
-                <div>
-                  <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="fluid" position="top">
-                      <MDBModalHeader>
-                        <h1>{this.state.title}</h1>
-                        <h6>{this.state.tagline}</h6>
-                      </MDBModalHeader>
-                      <MDBModalBody>
-                        <ModalImages
-                            imageOne = {this.state.imageOne}
-                            imageTwo= {this.state.imageTwo}
-                        />
-                      <p>{this.state.description}</p>
-                      <p>{this.state.role}</p>
-                      <ModalList
-                          techsUsed={this.state.techsUsed}
+                    <h5>Camp Wannagetajob</h5>
+                      <PortfolioButton
+                        onClick = {this.toggle(3)}
                       />
-                  </MDBModalBody>
-                  <MDBModalFooter>
-                  </MDBModalFooter>
-                </MDBModal>
-                </div>
-            </Row>
+                    </PortfolioImage>
+                </Col>
+
+                <Col xs={12} md={6} lg={4}>
+                  <PortfolioImage
+                      img={brewsPreview}
+                      alt="Brews Beats Preview"
+                  >
+                    <h5>Brews and Beats</h5>
+                     <PortfolioButton
+                        onClick = {this.toggle(4)}
+                      />
+                  </PortfolioImage>
+                </Col>
+
+                <Col xs={12} md={6} lg={4}>
+                  <PortfolioImage
+                      img={mongoPreview}
+                      alt="News Scraper Preview"
+                  >
+                    <h5>News Scraper</h5>
+                    <PortfolioButton
+                      onClick = {this.toggle(5)}
+                    />
+                  </PortfolioImage>
+                </Col>
+                </Row>
+                <Row>
+                  <Col sm={12}>
+                    <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="fluid" position="top">
+                        <MDBModalHeader toggle={this.toggle(0)}>
+                          <h1>{this.state.title}</h1>
+                          <h6>{this.state.tagline}</h6>
+                        </MDBModalHeader>
+                        <MDBModalBody>
+                          <ModalImages
+                              imageOne = {this.state.imageOne}
+                              imageTwo= {this.state.imageTwo}
+                          />
+                        <p>{this.state.description}</p>
+                        <p>{this.state.role}</p>
+                        <ModalList
+                            techsUsed={this.state.techsUsed}
+                        />
+                    </MDBModalBody>
+                    <MDBModalFooter>
+                    </MDBModalFooter>
+                  </MDBModal>
+                  </Col>
+              </Row>
         </PortfolioContainer>
       )
   }
