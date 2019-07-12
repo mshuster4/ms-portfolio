@@ -1,57 +1,26 @@
-import React, { Component } from "react";
-import Carousel from 'react-bootstrap/Carousel'
+import React from "react";
+import { Row, Col, Image } from 'react-bootstrap'
 
 
-class ModalImages extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-
-
-    this.handleSelect = this.handleSelect.bind(this);
-
-    this.state = {
-      index: 0,
-      direction: null,
-    };
-  }
-
-  handleSelect(selectedIndex, e) {
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction,
-    });
-  }
-
-  render() {
-    const { index, direction } = this.state;
-
-    return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-        interval={null}
-        fade={true}
-      >
-        <Carousel.Item>
-          <img
-            className="d-block w-100 img-fluid"
-            src={this.props.imageOne}
+function ModalImages(props) {
+  return (
+      <Row> 
+        <Col sm={6}>
+          <Image
+            className="img-fluid modal-image"
+            src={props.imageOne}
             alt="First slide"
           />
-
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 img-fluid"
-            src={this.props.imageTwo}
+        </Col>
+        <Col sm={6}>
+          <Image
+            className="img-fluid modal-image"
+            src={props.imageTwo}
             alt="Second Slide"
           />
-
-        </Carousel.Item>
-      </Carousel>
+        </Col>
+      </Row>
     );
-  }
 }
 
 export default ModalImages 
