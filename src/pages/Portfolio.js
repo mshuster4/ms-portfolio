@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap"
+import { MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import PortfolioContainer from "../components/PortfolioContainer"
-import PortfolioModal from "../components/PortfolioModal";
 import PortfolioImage from "../components/PortfolioImage"
+import PortfolioButton from "../components/PortfolioButton";
+import ModalImages from "../components/ModalImages";
+import ModalList from "../components/ModalList";
 import blockPreview from "../assets/page-images/block-party-preview.png";
 import blockScreenOne from "../assets/page-images/block-party-shot-one.png";
 import blockScreenTwo from "../assets/page-images/block-party-shot-two.png";
@@ -24,6 +27,32 @@ import mongoScreenTwo from "../assets/page-images/mongo-shot-two.png";
 import projects from "../projects.json";
 
 class Portfolio extends Component {
+
+  state = {
+        modal: false,
+        title: "",
+        tagline: "",
+        imageOne: "",
+        imageTwo: "",
+        description: "",
+        role: "",
+        techsUsed: ""
+    }
+
+    toggle = () => {
+       console.log("clicked");
+        this.setState({
+        modal: !this.state.modal,
+        title: projects[0].title,
+        tagline: projects[0].tagline,
+        imageOne: blockScreenOne,
+        imageTwo: blockScreenTwo,
+        description: projects[0].description,
+        role: projects[0].role,
+        techsUsed: projects[0].techsUsed
+      
+    });
+  }
    
   render() {
       return (
@@ -36,15 +65,9 @@ class Portfolio extends Component {
                         alt="Block Party Preview"
                     >
                         Block Party
-                     <PortfolioModal
-                      title={projects[0].title}
-                      description={projects[0].description}
-                      role={projects[0].role}
-                      tagline={projects[0].tagline}
-                      imageOne={blockScreenOne}
-                      imageTwo={blockScreenTwo}
-                      techsUsed={projects[0].techsUsed}
-                      />
+                        <PortfolioButton
+                            onClick = {this.toggle}
+                          />
                     </PortfolioImage>
                 </Col>
 
@@ -53,14 +76,6 @@ class Portfolio extends Component {
                     img={readingPreview}
                     alt="Reading Wishlist Preview"
                   >
-                   <PortfolioModal
-                        title={projects[1].title}
-                        description={projects[1].description}
-                        tagline={projects[1].tagline}
-                        imageOne={readingScreenOne}
-                        imageTwo={readingScreenTwo}
-                        techsUsed={projects[1].techsUsed}
-                    />
                     Reading Wishlist
                   </PortfolioImage>
                 </Col>
@@ -71,14 +86,6 @@ class Portfolio extends Component {
                       alt="Friend Finder Preview"
                   >
                   Friend Finder
-                  <PortfolioModal
-                      title={projects[2].title}
-                      description={projects[2].description}
-                      tagline={projects[2].tagline}
-                      imageOne={friendScreenOne}
-                      imageTwo={friendScreenTwo}
-                      techsUsed={projects[2].techsUsed}
-                    />
                   </PortfolioImage>
                 </Col>
 
@@ -88,15 +95,6 @@ class Portfolio extends Component {
                         alt="Camp Wanna Preview"
                     >
                         Camp Wannagetajob
-                    <PortfolioModal
-                        title={projects[3].title}
-                        description={projects[3].description}
-                        tagline={projects[3].tagline}
-                        imageOne={campScreenOne}
-                        imageTwo={campScreenTwo}
-                        techsUsed={projects[3].techsUsed}
-                        
-                      />
                     </PortfolioImage>
 
                 </Col>
@@ -107,16 +105,6 @@ class Portfolio extends Component {
                         alt="Brews Beats Preview"
                     >
                       Brews and Beats
-                    <PortfolioModal
-                      title={projects[4].title}
-                      description={projects[4].description}
-                      tagline={projects[4].tagline}
-                      imageOne={brewsScreenOne}
-                      imageTwo={brewsScreenTwo}
-                      techsUsed={projects[4].techsUsed}
-                      
-                    >
-                    </PortfolioModal>
                     </PortfolioImage>
                 </Col>
 
@@ -126,17 +114,29 @@ class Portfolio extends Component {
                         alt="News Scraper Preview"
                     >
                       News Scraper
-                    <PortfolioModal
-                      title={projects[5].title}
-                      description={projects[5].description}
-                      tagline={projects[5].tagline}
-                      imageOne={mongoScreenOne}
-                      imageTwo={mongoScreenTwo}
-                      techsUsed={projects[5].techsUsed}
-                      
-                    />
                     </PortfolioImage>
                 </Col>
+                <div>
+                  <MDBModal isOpen={this.state.modal} toggle={this.toggle} size="fluid" position="top">
+                      <MDBModalHeader>
+                        <h1>{this.state.title}</h1>
+                        <h6>{this.state.tagline}</h6>
+                      </MDBModalHeader>
+                      <MDBModalBody>
+                        <ModalImages
+                            imageOne = {this.state.imageOne}
+                            imageTwo= {this.state.imageTwo}
+                        />
+                      <p>{this.state.description}</p>
+                      <p>{this.state.role}</p>
+                      <ModalList
+                          techsUsed={this.state.techsUsed}
+                      />
+                  </MDBModalBody>
+                  <MDBModalFooter>
+                  </MDBModalFooter>
+                </MDBModal>
+                </div>
             </Row>
         </PortfolioContainer>
       )
