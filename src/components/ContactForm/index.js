@@ -1,15 +1,19 @@
 import React, { Component } from "react";
 import SendButton from "../SendButton";
 import { MDBInput } from "mdbreact";
+import axios from 'axios';
+
 
 class ContactForm extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
         name: "",
         email: "",
-        message: ""
+        message: "",
+        mailSent: false,
+        error: null
     };
   }
 
@@ -19,9 +23,10 @@ class ContactForm extends Component {
     })
   }
 
-  sendForm = () => {
-    console.log(this.state);
-  }
+  handleFormSubmit = e => {
+    e.preventDefault();
+    console.log(this.state)
+};
 
 
   render() {
@@ -31,7 +36,7 @@ class ContactForm extends Component {
               <p className="h4 text-center py-4">Contact</p>
               <div className="grey-text">
                 <MDBInput
-                  label="Your name"
+                  label="Name"
                   icon="user"
                   group
                   type="text"
@@ -43,7 +48,7 @@ class ContactForm extends Component {
                   onInput={this.handleInput}
                 />
                 <MDBInput
-                  label="Your email"
+                  label="Email"
                   icon="envelope"
                   group
                   type="email"
@@ -57,14 +62,14 @@ class ContactForm extends Component {
                 <MDBInput
                   type="textarea"
                   rows="2"
-                  label="Your message"
-                  icon="pencil"
+                  label="Message"
+                  icon="pencil-alt"
                   name="message"
                   value={this.state.message}
                   onInput={this.handleInput}/>
               </div>
               <div className="text-center py-4 mt-3">
-                <SendButton onClick={this.sendForm}>
+                <SendButton onClick={this.handleFormSubmit}>
                   Send Message
                 </SendButton>
               </div>
