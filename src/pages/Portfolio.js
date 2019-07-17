@@ -3,7 +3,8 @@ import { Row, Col } from "react-bootstrap"
 import { MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import PortfolioContainer from "../components/PortfolioContainer"
 import PortfolioImage from "../components/PortfolioImage"
-import PortfolioButton from "../components/PortfolioButton";
+import Button from "../components/Button";
+import Icon from "../components/Icon";
 import ModalImages from "../components/ModalImages";
 import ModalList from "../components/ModalList";
 import blockPreview from "../assets/page-images/block-party-preview.png";
@@ -129,10 +130,34 @@ class Portfolio extends Component {
                         img={blockPreview}
                         alt="Block Party Preview"
                     >
-                      <h5>Block Party</h5>
-                      <PortfolioButton
+                      <h5 className="project-title">Block Party</h5>
+                      <Button
                           onClick = {this.toggle(0)}
-                        />
+                          className = "portfolio-button"
+                          outline={false}
+                          size = "sm"
+
+                      >
+                        Demo <Icon icon={["fas", "book-open"]} />
+                      </Button>
+                      <Button
+                          onClick = {this.toggle(0)}
+                          className = "portfolio-button"
+                          outline={false}
+                          size = "sm"
+
+                      >
+                        Github <Icon icon={["fas", "book-open"]} />
+                      </Button>
+                       <Button
+                          onClick = {this.toggle(0)}
+                          className = "portfolio-button"
+                          outline={false}
+                          size = "sm"
+
+                      >
+                        Learn More <Icon icon={["fas", "book-open"]} />
+                      </Button>
                     </PortfolioImage>
                 </Col>
 
@@ -141,8 +166,8 @@ class Portfolio extends Component {
                     img={readingPreview}
                     alt="Reading Wishlist Preview"
                   >
-                    <h5>Reading Wishlist</h5>
-                     <PortfolioButton
+                    <h5 className="project-title">Reading Wishlist</h5>
+                     <Button
                         onClick = {this.toggle(1)}
                       />
                   </PortfolioImage>
@@ -153,8 +178,8 @@ class Portfolio extends Component {
                       img={friendPreview}
                       alt="Friend Finder Preview"
                   >
-                    <h5>Friend Finder</h5>
-                      <PortfolioButton
+                    <h5 className="project-title">Friend Finder</h5>
+                      <Button
                         onClick = {this.toggle(2)}
                       />
                     </PortfolioImage>
@@ -165,8 +190,8 @@ class Portfolio extends Component {
                         img={campPreview}
                         alt="Camp Wanna Preview"
                     >
-                    <h5>Camp Wannagetajob</h5>
-                      <PortfolioButton
+                    <h5 className="project-title">Camp Wannagetajob</h5>
+                      <Button
                         onClick = {this.toggle(3)}
                       />
                     </PortfolioImage>
@@ -177,8 +202,8 @@ class Portfolio extends Component {
                       img={brewsPreview}
                       alt="Brews Beats Preview"
                   >
-                    <h5>Brews and Beats</h5>
-                     <PortfolioButton
+                    <h5 className="project-title">Brews and Beats</h5>
+                     <Button
                         onClick = {this.toggle(4)}
                       />
                   </PortfolioImage>
@@ -189,8 +214,8 @@ class Portfolio extends Component {
                       img={mongoPreview}
                       alt="News Scraper Preview"
                   >
-                    <h5>News Scraper</h5>
-                    <PortfolioButton
+                    <h5 className="project-title">News Scraper</h5>
+                    <Button
                       onClick = {this.toggle(5)}
                     />
                   </PortfolioImage>

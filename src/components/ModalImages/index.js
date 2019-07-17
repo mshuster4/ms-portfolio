@@ -14,7 +14,7 @@ function ModalImages(props) {
         </Col>
         <Col sm={12} md={6}>
           <Image
-            className="img-fluid z-depth-1-half modal-image mb-4"
+            className="img-fluid z-depth-1-half modal-image mb-4 mt-2"
             src={props.imageTwo}
             alt="Second Slide"
           />

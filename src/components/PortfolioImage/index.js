@@ -6,19 +6,15 @@ import "./style.css";
 function PortfolioImage(props) {
 
   return (
-      <div>
+      <div className="portfolio-image">
           <MDBView hover>
                 <img
                     src={props.img}
                     className="img-fluid" 
                     alt={props.alt}
                 />
-              <MDBMask overlay="white-strong" className="text-center">
-                <Row>
-                    <Col sm={12}>
-                       {props.children}
-                    </Col>
-                </Row>
+              <MDBMask overlay="black-strong" className="text-center">
+                  {props.children}
               </MDBMask>
           </MDBView>
       </div>

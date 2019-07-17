@@ -6,6 +6,44 @@
     justify-content: space-evenly;
 }
 
+.mask.rgba-black-strong.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-title {
+    color: #F2F2F2;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
+    background: none !important;
+    color: #F2F2F2;
+    font-size: 1rem;
+}
+
+.btn-default {
+    background-color: none !important;
+    color: #F2F2F2;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn-default:hover {
+    background-color: none !important;
+    color: #F2F2F2;
+    outline: 1px solid #34BF8C;
+    font-size: 1rem;
+}
+
+
+
 .modal-body {
     padding-bottom: 0;
 }
@@ -14,6 +52,27 @@
     .modal-header {
         text-align: center
     }
+
+    button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .btn-default {
+        background-color: none !important;
+        color: #F2F2F2;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .btn-default:hover {
+        background-color: none !important;
+        color: #F2F2F2;
+        outline: 1px solid #34BF8C;
+        font-size: 1rem;
+    }
+    
 
 } 
 

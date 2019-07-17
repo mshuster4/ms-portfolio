@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap";
 import LandingContainer from "../components/LandingContainer";
 import LandingText from "../components/LandingText";
-import LandingButton from "../components/LandingButton";
 import LandingImg from "../components/LandingImg";
 
 
@@ -14,19 +13,13 @@ class Landing extends Component {
         return (
 
                 <LandingContainer>
-                <Row>
-                  <Col sm={12}>
-                   <LandingImg>
                       <Row>
-                        <Col sm={{span:6, offset:1}}>
+                        <Col md={6}>
                             <LandingText delay={2000}><h1>Hello. My name is Marguerite Shuster.</h1></LandingText>
                             <LandingText delay={3000}><h1>I am a Web Developer and UI Designer</h1></LandingText>
                         </Col>
-                        <Col sm={5}></Col>
+                        <Col md={6}><LandingImg></LandingImg></Col>
                       </Row>
-                 </LandingImg>
-                 </Col> 
-                </Row>
               </LandingContainer>
         );
     }

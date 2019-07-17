@@ -25,7 +25,8 @@
  
         "title": "Campwannagetajob",
         "tagline": "Collection of games created to sharpen critical thinking and job interview skills",
-        "description": "For this project, my team was tasked with creating a MERN stack application.  We decided to create a series of brain-building games and technical interview related quizzes.  Each player’s game scores are displayed on a leaderboard, as well as posted to a user’s profile.  My main role was the group’s UI designer/Frontend Developer.  I used Adobe Illustrator to create the main logo each game icon.  However, I also developed all technical interview quizzes (excluding Quiz Bowl) as well as a timed addition game.",
+        "description": "For this project, my team was tasked with creating a MERN stack application.  We decided to create a series of brain-building games and technical interview related quizzes.  Each player’s game scores are displayed on a leaderboard, as well as posted to a user’s profile.",
+        "role": "My main role was the group’s UI designer/Frontend Developer.  I used Adobe Illustrator to create the main logo each game icon.  Additionally, I also developed all technical interview quizzes (excluding Quiz Bowl) as well as a timed logic game.",
         "techsUsed": ["HTML", "CSS", "Bootstrap", "React.js", "Node.js", "Express.js", "MongoDB", "Auth0", "Adobe Illustrator", "Heroku (deployment)"]
 
     },

@@ -2,12 +2,10 @@ import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  "./style.css"
 
-function FooterIcon(props) {
+function Icon(props) {
     return (
-        <div>
-            <FontAwesomeIcon icon={props.icon}/>
-        </div>
+        <FontAwesomeIcon icon={props.icon}/>
     )
 }
 
-export default FooterIcon;
+export default Icon;
