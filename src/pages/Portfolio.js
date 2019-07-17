@@ -123,7 +123,7 @@ class Portfolio extends Component {
   render() {
       return (
         <PortfolioContainer>
-            <Row className="align-self-center">
+            <Row>
               <Col xs={12} md={6} lg={4}>
                     <PortfolioImage
                         img={blockPreview}
@@ -199,9 +199,9 @@ class Portfolio extends Component {
                 <Row>
                   <Col sm={12}>
                     <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="lg" position="top">
-                        <MDBModalHeader toggle={this.toggle(0)}>
+                        <MDBModalHeader toggle={this.toggle(0)} titleClass="w-100">
                           <h1>{this.state.title}</h1>
-                          <h6>{this.state.tagline}</h6>
+                          <h6 className="modal-tag"><i>{this.state.tagline}</i></h6>
                         </MDBModalHeader>
                         <MDBModalBody>
                           <ModalImages
@@ -210,11 +210,11 @@ class Portfolio extends Component {
                           />
                         <p>{this.state.description}</p>
                         <p>{this.state.role}</p>
-                        <ModalList
+                    </MDBModalBody>
+                    <MDBModalFooter className="d-flex justify-content-start">
+                      <ModalList
                             techsUsed={this.state.techsUsed}
                         />
-                    </MDBModalBody>
-                    <MDBModalFooter>
                     </MDBModalFooter>
                   </MDBModal>
                   </Col>

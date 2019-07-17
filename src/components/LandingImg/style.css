@@ -5,19 +5,3 @@
     background-repeat: no-repeat;
 }
 
-@media (min-width: 568px) {
-  .landing-img {
-        background-size: 33.33% auto;
-        background-position: bottom right;
-        background-repeat: no-repeat;
-  }
-}
-
-@media (min-width: 768px) {
-    .landing-img {
-          background-size: 33.33% auto;
-          background-position: bottom right;
-          background-repeat: no-repeat;
-    }
-  }
-  

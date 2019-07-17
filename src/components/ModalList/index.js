@@ -11,7 +11,10 @@ function ModalList(props) {
     );
     console.log(listItems);
     return (
-        <MDBListGroup>{listItems}</MDBListGroup>
+        <div className="modal-list">
+            <h4><u>Technologies Used</u></h4>
+            <MDBListGroup>{listItems}</MDBListGroup>
+        </div>
     )
 }
 

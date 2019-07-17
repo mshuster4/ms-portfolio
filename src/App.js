@@ -35,7 +35,7 @@ library.add(
 class App extends Component {
   render() {
   return (
-        <Contact/>
+        <Portfolio/>
     );
   }
 
