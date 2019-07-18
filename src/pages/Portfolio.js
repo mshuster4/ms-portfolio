@@ -138,24 +138,6 @@ class Portfolio extends Component {
                           size = "sm"
 
                       >
-                        Demo <Icon icon={["fas", "book-open"]} />
-                      </Button>
-                      <Button
-                          onClick = {this.toggle(0)}
-                          className = "portfolio-button"
-                          outline={false}
-                          size = "sm"
-
-                      >
-                        Github <Icon icon={["fas", "book-open"]} />
-                      </Button>
-                       <Button
-                          onClick = {this.toggle(0)}
-                          className = "portfolio-button"
-                          outline={false}
-                          size = "sm"
-
-                      >
                         Learn More <Icon icon={["fas", "book-open"]} />
                       </Button>
                     </PortfolioImage>
@@ -169,7 +151,12 @@ class Portfolio extends Component {
                     <h5 className="project-title">Reading Wishlist</h5>
                      <Button
                         onClick = {this.toggle(1)}
-                      />
+                         className = "portfolio-button"
+                         outline={false}
+                         size = "sm"
+                      >
+                      Learn More <Icon icon={["fas", "book-open"]} />
+                    </Button>
                   </PortfolioImage>
                 </Col>
 
@@ -181,8 +168,13 @@ class Portfolio extends Component {
                     <h5 className="project-title">Friend Finder</h5>
                       <Button
                         onClick = {this.toggle(2)}
-                      />
-                    </PortfolioImage>
+                        className = "portfolio-button"
+                        outline={false}
+                        size = "sm"
+                      >
+                      Learn More <Icon icon={["fas", "book-open"]} />
+                    </Button>
+                  </PortfolioImage>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
@@ -193,8 +185,13 @@ class Portfolio extends Component {
                     <h5 className="project-title">Camp Wannagetajob</h5>
                       <Button
                         onClick = {this.toggle(3)}
-                      />
-                    </PortfolioImage>
+                        className = "portfolio-button"
+                        outline={false}
+                        size = "sm"
+                      >
+                      Learn More <Icon icon={["fas", "book-open"]} />
+                    </Button>
+                  </PortfolioImage>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
@@ -202,10 +199,15 @@ class Portfolio extends Component {
                       img={brewsPreview}
                       alt="Brews Beats Preview"
                   >
-                    <h5 className="project-title">Brews and Beats</h5>
+                    <h5 className="project-title">Brews <span>&#38;</span> Beats</h5>
                      <Button
                         onClick = {this.toggle(4)}
-                      />
+                        className = "portfolio-button"
+                        outline={false}
+                        size = "sm"
+                      >
+                      Learn More <Icon icon={["fas", "book-open"]} />
+                    </Button>
                   </PortfolioImage>
                 </Col>
 
@@ -217,7 +219,12 @@ class Portfolio extends Component {
                     <h5 className="project-title">News Scraper</h5>
                     <Button
                       onClick = {this.toggle(5)}
-                    />
+                      className = "portfolio-button"
+                      outline={false}
+                      size = "sm"
+                    >
+                      Learn More <Icon icon={["fas", "book-open"]} />
+                    </Button>
                   </PortfolioImage>
                 </Col>
                 </Row>
@@ -235,11 +242,28 @@ class Portfolio extends Component {
                           />
                         <p>{this.state.description}</p>
                         <p>{this.state.role}</p>
-                    </MDBModalBody>
-                    <MDBModalFooter className="d-flex justify-content-start">
-                      <ModalList
+                        <ModalList
                             techsUsed={this.state.techsUsed}
                         />
+                    </MDBModalBody>
+                    <MDBModalFooter className="display-flex justify-content-start">
+                      <Button
+                          outline={true}
+                          size = "md"
+                          color="black"
+
+                      >
+                        Launch Demo <Icon icon={["fas", "book-open"]} />
+                      </Button>
+                      <Button
+                          outline={true}
+                          color="black"
+                          size = "md"
+                          className="ml-3"
+
+                      >
+                        View Github <Icon icon={["fas", "book-open"]} />
+                      </Button>
                     </MDBModalFooter>
                   </MDBModal>
                   </Col>

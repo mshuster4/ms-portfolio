@@ -1,5 +1,4 @@
 import React from 'react';
-import { MDBListGroup, MDBListGroupItem } from "mdbreact";
 
 
 function ModalList(props) {
@@ -7,13 +6,15 @@ function ModalList(props) {
     console.log(props.techsUsed)
     const techs = props.techsUsed;
     const listItems = techs.map((tech) => 
-        <MDBListGroupItem>{tech}</MDBListGroupItem>
+        <li>{tech}</li>
     );
     console.log(listItems);
     return (
         <div className="modal-list">
-            <h4><u>Technologies Used</u></h4>
-            <MDBListGroup>{listItems}</MDBListGroup>
+            <h4 className="list-header">Technologies Used</h4>
+            <ul>
+                {listItems}
+            </ul>
         </div>
     )
 }
