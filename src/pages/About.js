@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AboutContainer from "../components/AboutContainer";
 import AboutCard from "../components/AboutCard";
 import AboutText from "../components/AboutText";
-import AboutButton from "../components/AboutButton";
+import Button from "../components/Button";
 import AboutImage from "../components/AboutImage"
 import DevelopmentSkills from "../components/DevelopmentSkills";
 import DesignSkills from "../components/DesignSkills"
@@ -15,23 +15,26 @@ class About extends Component {
                 <Row>
                   <Col sm={12}>
                     <AboutCard>
-                      <Row>
+                      <Row className="align-items-center">
                         <Col sm={12} lg={{ span: 4, offset: 1}}>
                           <AboutImage/>
                         </Col>
                         <Col sm={12} lg={6}>
-                          <AboutText/>
-                            <Row>
-                                <Col sm={12} md={4}>
-                                    <AboutButton text="Say Hello"/>
-                                </Col>
-                                <Col sm={12} md={4}>
-                                    <AboutButton text="Read Resume"/>
-                                </Col>
-                                <Col sm={12} md={4}>
-                                    <AboutButton text="See Portfolio"/>
-                                </Col>
-                            </Row>
+                          <AboutText></AboutText>
+                          <Button
+                            outline={true}
+                            className="about-button"
+                            color="black"
+                          >
+                            View Resume
+                          </Button>
+                          <Button
+                            outline={true}
+                            className="about-button"
+                            color="black"
+                          >
+                            Say Hello
+                          </Button>
                         </Col>
                         <Col lg={1}></Col>
                       </Row>
