@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import SendButton from "../SendButton";
 import { MDBInput } from "mdbreact";
 import axios from 'axios';
 
@@ -69,9 +68,6 @@ class ContactForm extends Component {
                   onInput={this.handleInput}/>
               </div>
               <div className="text-center py-4 mt-3">
-                <SendButton onClick={this.handleFormSubmit}>
-                  Send Message
-                </SendButton>
               </div>
             </form>
           </div>

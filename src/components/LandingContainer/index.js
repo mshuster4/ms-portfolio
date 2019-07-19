@@ -5,7 +5,7 @@ import "./style.css";
 function LandingContainer(props) {
 
     return (
-         <Container className="landing-container" fluid>
+         <Container className="landing-container">
             {props.children}
          </Container>
     )

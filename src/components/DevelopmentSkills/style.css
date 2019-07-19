@@ -1,4 +1,6 @@
 .list-group-item {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     border: none;
-    padding: 0;
+    outline: none;
 }

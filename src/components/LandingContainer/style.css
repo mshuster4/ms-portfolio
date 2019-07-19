@@ -1,3 +1,22 @@
-.landing-container {
+.landing-img {
     height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+@media (min-width: 568px ) {
+    .landing-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-position: bottom right;
+        background-size: 33.33% auto;
+    }
+
+    .landing-content {
+        min-height: 66.66%;
+        text-align: center; 
+    }
+
 }

@@ -4,3 +4,11 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.card {
+    margin-bottom: 1rem;
+}
+
+button.btn.btn-outline-black.Ripple-parent.about-button {
+    margin: .5rem 1rem 0 0;
+}

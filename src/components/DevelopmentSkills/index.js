@@ -9,7 +9,7 @@ function DevelopmentSkills() {
                 <Card.Header>Development Skills</Card.Header>
                     <ListGroup className="about-list" variant="flush">
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>
-                        <ListGroup.Item>Bootstrap</ListGroup.Item>
+                        <ListGroup.Item>Frameworks</ListGroup.Item>
                         <ListGroup.Item>JavaScript</ListGroup.Item>
                         <ListGroup.Item>JQuery</ListGroup.Item>
                         <ListGroup.Item>Node.js/Express</ListGroup.Item>
