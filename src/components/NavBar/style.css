@@ -3,9 +3,8 @@
     .nav-bg {
         color: white;
         border-bottom: solid 1px black;
-        height: 40px;
-        top: -40px;
-        margin-bottom: 0.5rem;
+        align-items: center;
+        min-height: 5%;
     }
 
     .nav-link {
@@ -30,10 +29,11 @@
 @media only screen and (min-width: 600px) {
 
     .nav-bg {
+        height: 6%;
+        align-items: center;
         padding: 0px 15px 0px 15px;
         color: white;
         border-bottom: solid 1px black;
-        margin-bottom: 0.5rem;
     }
 
     .nav-pages {

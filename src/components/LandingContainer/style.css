@@ -1,11 +1,20 @@
+.landing-container {
+    height: 95%;
+}
+
+
 .landing-img {
-    height: 100vh;
+    height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 @media (min-width: 568px ) {
+    .landing-container {
+        height: 94%;
+    }
+
     .landing-img {
         display: flex;
         align-items: center;
@@ -15,7 +24,7 @@
     }
 
     .landing-content {
-        min-height: 66.66%;
+        min-height: 33.33%;
         text-align: center; 
     }
 

@@ -1,5 +1,5 @@
 import React, { Component}  from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio"
@@ -33,9 +33,39 @@ library.add(
 
 
 class App extends Component {
+
+  state = {
+    currentPage: "Landing"
+  };
+
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
+
+  renderPage = () => {
+
+    if (this.state.currentPage === "Landing") {
+      return <Landing/>;
+    } else if (this.state.currentPage === "Portfolio") {
+      return <Portfolio />;
+    } else if (this.state.currentPage === "About") {
+      return <About/>
+    } else {
+      return <Contact/>
+    }
+
+  }
+
   render() {
   return (
-        <Landing/>
+       <div className="page-content">
+        <NavBar
+          currentPage={this.state.currentPage}
+          handlePageChange={this.handlePageChange}
+        />
+        {this.renderPage()}
+      </div>
+
     );
   }
 
