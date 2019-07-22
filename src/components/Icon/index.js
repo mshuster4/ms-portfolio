@@ -4,7 +4,7 @@ import  "./style.css"
 
 function Icon(props) {
     return (
-        <FontAwesomeIcon icon={props.icon}/>
+        <FontAwesomeIcon icon={props.icon} size={props.size}/>
     )
 }
 

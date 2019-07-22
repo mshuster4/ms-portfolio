@@ -10,7 +10,7 @@ class Landing extends Component {
     render() {
         return (
               <LandingContainer>
-                 <LandingImg className="d-flex justify-content-center">
+                 <LandingImg className="d-flex justify-content-start">
                     <div className="landing-content">
                         <LandingText delay={2000}><h1 className="h1-responsive">My name is Marguerite Shuster.</h1></LandingText>
                         <LandingText delay={3000}><h1 className="h1-responsive">I am a Web Developer and UI Designer.</h1></LandingText>
