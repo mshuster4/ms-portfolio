@@ -13,9 +13,7 @@ function DesignSkills() {
                         <ListGroup.Item>InDesign</ListGroup.Item>
                         <ListGroup.Item>Animation</ListGroup.Item>
                         <ListGroup.Item>Wireframing</ListGroup.Item>
-                        <ListGroup.Item>WordPress</ListGroup.Item>
                         <ListGroup.Item>Responsive Web Design</ListGroup.Item>
-                        <ListGroup.Item>Social Media Marketing</ListGroup.Item>
                         <ListGroup.Item>SEO</ListGroup.Item>
                     </ListGroup>
             </Card>

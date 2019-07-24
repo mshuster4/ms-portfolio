@@ -1,9 +1,8 @@
 .portfolio-container {
     max-width: 83%;
-    min-height: 94vh;
-    padding: 1.75rem 0 1.75rem 0;
+    min-height: 95vh;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .mask.rgba-black-strong.text-center {

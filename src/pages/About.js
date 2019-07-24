@@ -16,7 +16,7 @@ class About extends Component {
                   <Col sm={12}>
                     <AboutCard>
                       <Row className="align-items-center">
-                        <Col sm={12} lg={{ span: 4, offset: 1}}>
+                        <Col sm={12} lg={{ span: 4, offset: 1}} className="d-flex justify-content-center">
                           <AboutImage/>
                         </Col>
                         <Col sm={12} lg={6}>

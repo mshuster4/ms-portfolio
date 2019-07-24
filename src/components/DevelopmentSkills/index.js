@@ -11,10 +11,8 @@ function DevelopmentSkills() {
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>
                         <ListGroup.Item>Frameworks</ListGroup.Item>
                         <ListGroup.Item>JavaScript</ListGroup.Item>
-                        <ListGroup.Item>JQuery</ListGroup.Item>
                         <ListGroup.Item>Node.js/Express</ListGroup.Item>
                         <ListGroup.Item>React.js</ListGroup.Item>
-                        <ListGroup.Item>Firebase</ListGroup.Item>
                         <ListGroup.Item>MySql</ListGroup.Item>
                         <ListGroup.Item>MongoDB</ListGroup.Item>
                     </ListGroup>

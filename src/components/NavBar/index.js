@@ -1,55 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/page-images/ms-logo.png";
-import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import "./style.css";
 
-function NavBar(props) {
+function NavBar() {
 
     return (
         <div class="nav-bg d-sm-flex">
             <Nav className="d-none d-sm-inline-flex">
               <Nav.Item>
-                <Nav.Link
-                  href="#landing"
-                  onClick={() => props.handlePageChange("Landing")}
-                  className={props.currentPage === "Landing" ? "nav-link active" : "nav-link"}
-                >
+                <Link to={"/"} className="nav-link">
                     <img
                         alt="logo"
                         src={logo}
                         width="30"
                     />
-                    </Nav.Link>
+                    </Link>
                 </Nav.Item>
               </Nav>
               <Nav className="d-sm-inline-flex ml-sm-auto">
                 <Nav.Item>
-                  <Nav.Link 
-                     href="#portfolio"
-                     onClick={() => props.handlePageChange("Portfolio")}
-                     className={props.currentPage === "Landing" ? "nav-link active" : "nav-link"}
-                  >
+                  <Link to={"/portfolio"} className="nav-link">
                     Portfolio
-                  </Nav.Link>
+                  </Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link  
-                    href="#about"
-                    onClick={() => props.handlePageChange("About")}
-                    className={props.currentPage === "Landing" ? "nav-link active" : "nav-link"}
-                    >
+                  <Link to={"/about"} className="nav-link">
                       About
-                    </Nav.Link>
+                  </Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link  
-                    href="#contact"
-                    onClick={() => props.handlePageChange("Contact")}
-                    className={props.currentPage === "Landing" ? "nav-link active" : "nav-link"}
-                  >
+                  <Link to={"/contact"} className="nav-link">
                     Contact
-                  </Nav.Link>
+                  </Link>
                 </Nav.Item>
             </Nav>
       </div>

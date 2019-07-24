@@ -2,6 +2,10 @@ html, body {
    height: 100vh;
 }
 
-.page-content {
+#root {
    height: 100vh; 
+}
+
+.page-content {
+   height: 100%;
 }
