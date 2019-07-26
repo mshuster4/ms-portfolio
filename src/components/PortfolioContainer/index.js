@@ -4,9 +4,10 @@ import "./style.css";
 
 function PortfolioContainer(props) {
     return (
-         <Container fluid className="portfolio-container d-flex">
-            {props.children}
-         </Container>
+        <Container fluid className="portfolio-container d-flex mt-4">
+          {props.children}
+        </Container>
+    
     )
 }
 

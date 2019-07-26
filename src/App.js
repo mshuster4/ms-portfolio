@@ -1,5 +1,6 @@
 import React, { Component}  from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import ReactFullpage from '@fullpage/react-fullpage';
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Portfolio from "./pages/Portfolio"
@@ -31,26 +32,52 @@ library.add(
 )
 
 
+const SCROLL_KEY = process.env.FULLPAGE_SCROLL;
+
 
 class App extends Component {
 
+ onLeave(origin, destination, direction) {
+    console.log("Leaving section " + origin.index);
+    console.log(SCROLL_KEY);
+  }
+  afterLoad(origin, destination, direction) {
+    console.log("After load: " + destination.index);
+  }
   render() {
-  return (
-        <div className="page-content">
-         <Router>
-          <NavBar/>
-          <Switch>
-                <Route exact path='/' component={Landing} />
-                <Route path='/portfolio' component={Portfolio} />
-                <Route path='/about' component={About} />
-                <Route path='/contact' component={Contact} />
-            </Switch>
-            </Router>
-        </div>
-
+    return (
+      <div>
+      <NavBar/>
+      <ReactFullpage
+        licenseKey = {SCROLL_KEY}
+        scrollOverflow={true}
+        sectionsColor={["white", "white", "white", "white"]}
+        onLeave={this.onLeave.bind(this)}
+        afterLoad={this.afterLoad.bind(this)}
+        render={({ state, fullpageApi }) => {
+          return (
+            <div id="fullpage-wrapper">
+              <div className="section">
+                <Landing/>
+              </div>
+              <div className="section scrollable-content">
+                <Portfolio/>
+              </div>
+              <div className="section scrollable-content">
+                <About/>
+              </div>
+              <div className="section">
+                <Contact/>
+              </div>
+            </div>
+          );
+        }}
+      />
+      </div>
     );
   }
-
 }
+
+
 
 export default App;

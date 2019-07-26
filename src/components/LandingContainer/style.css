@@ -1,5 +1,5 @@
 .landing-container {
-    height: 95%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -14,7 +14,7 @@
 
 .landing-content {
     text-align: center; 
-    height: 30%;
+    height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,6 @@
 
 @media only screen and (min-width: 568px ) {
     .landing-container {
-        height: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -36,17 +35,17 @@
     }
 
     .landing-content {
-        height: 50%;
         text-align: center; 
+        height: 66.66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
     }
 
 }
 
 @media only screen and (min-width: 768px ) {
-    .landing-container {
-        height: 95%;
-    }
-
     .landing-img {
         background-position: bottom right;
         background-size: 33.33% auto;
@@ -60,8 +59,8 @@
     }
 
     .landing-content {
-        height: 40%;
-        text-align: center; 
+        height: 55%;
+    
     }
 
 

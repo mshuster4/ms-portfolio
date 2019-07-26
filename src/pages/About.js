@@ -42,10 +42,10 @@ class About extends Component {
                   </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} lg={6}>
+                    <Col sm={6} lg={6}>
                         <DevelopmentSkills/>
                     </Col>
-                    <Col sm={12} lg={6}>
+                    <Col sm={6} lg={6}>
                         <DesignSkills/>
                     </Col>
                 </Row>

@@ -1,6 +1,6 @@
 .portfolio-container {
     max-width: 83%;
-    min-height: 95vh;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: center;
 }
