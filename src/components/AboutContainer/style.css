@@ -1,14 +1,16 @@
 .about-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card {
-    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 button.btn.btn-outline-black.Ripple-parent.about-button {
     margin: .5rem 1rem 0 0;
+}
+
+.list-group-item {
+    padding: 10px 0;
+    border: none !important 
+}
+
+.card-header {
+    padding: 10px 0; 
 }

@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap'
 
 function AboutCard (props) {
     return(
-        <Card>
+        <Card className={props.className}>
             <Card.Body>
                 {props.children}
             </Card.Body>

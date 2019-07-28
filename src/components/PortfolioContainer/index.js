@@ -4,11 +4,11 @@ import "./style.css";
 
 function PortfolioContainer(props) {
     return (
-        <Container fluid className="portfolio-container d-flex mt-4">
+        <Container fluid className="portfolio-container d-flex mt-1">
           {props.children}
         </Container>
     
     )
 }
 
-export default PortfolioContainer;
+export default PortfolioContainer

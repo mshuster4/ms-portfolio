@@ -230,7 +230,7 @@ class Portfolio extends Component {
                 </Row>
                 <Row>
                   <Col sm={12}>
-                    <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="lg" position="top">
+                    <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="lg" position="top" centered>
                         <MDBModalHeader toggle={this.toggle(0)} titleClass="w-100">
                           <h1>{this.state.title}</h1>
                           <h6 className="modal-tag"><i>{this.state.tagline}</i></h6>
@@ -251,6 +251,7 @@ class Portfolio extends Component {
                           outline={true}
                           size = "md"
                           color="black"
+                          className="mt-0 mb-0"
 
                       >
                         Launch Demo <Icon icon={["fas", "book-open"]} />
@@ -259,7 +260,7 @@ class Portfolio extends Component {
                           outline={true}
                           color="black"
                           size = "md"
-                          className="ml-3"
+                          className="ml-3 mt-0 mb-0"
 
                       >
                         View Github <Icon icon={["fas", "book-open"]} />

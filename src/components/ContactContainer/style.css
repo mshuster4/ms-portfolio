@@ -1,7 +1,3 @@
-.contact-container {
-    min-height: 100vh;
-}
-
 button.btn.btn-default.Ripple-parent.contact-button {
     background-color: black !important;
     padding: 10px 15px;

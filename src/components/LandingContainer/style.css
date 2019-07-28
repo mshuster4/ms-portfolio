@@ -48,18 +48,23 @@
 @media only screen and (min-width: 768px ) {
     .landing-img {
         background-position: bottom right;
-        background-size: 33.33% auto;
+        background-size: cover;
     }
 
 }
 
 @media only screen and (min-width: 992px) {
+    .landing-img {
+        background-position: bottom right;
+        background-size: cover;
+    }
+
     .landing-container {
         display: block;
     }
 
     .landing-content {
-        height: 55%;
+        height: 50%;
     
     }
 

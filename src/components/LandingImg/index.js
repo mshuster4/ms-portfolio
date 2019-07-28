@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import LandingImgLg from "../../assets/page-images/landing-img-lg.png";
-import LandingImgSm from "../../assets/page-images/landing-img-sm.png";
+import LandingImgLg from "../../assets/page-images/landing-page-lg-2.png";
+import LandingImgSm from "../../assets/page-images/landing-pg-sm.png";
 
 function LandingImg (props) {
 

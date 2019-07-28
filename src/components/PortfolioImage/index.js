@@ -10,7 +10,7 @@ function PortfolioImage(props) {
           <MDBView hover>
                 <img
                     src={props.img}
-                    className="img-fluid" 
+                    className="img-fluid portfolio-image" 
                     alt={props.alt}
                 />
               <MDBMask overlay="black-strong" className="text-center">

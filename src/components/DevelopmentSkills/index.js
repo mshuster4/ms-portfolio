@@ -4,7 +4,7 @@ import "./style.css"
 
 function DevelopmentSkills() {
     return (
-        <div>
+        <div className="skills-list">
             <Card className="text-center"> 
                 <Card.Header>Development Skills</Card.Header>
                     <ListGroup className="about-list" variant="flush">
