@@ -230,7 +230,7 @@ class Portfolio extends Component {
                 </Row>
                 <Row>
                   <Col sm={12}>
-                    <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="lg" position="top" centered>
+                    <MDBModal isOpen={this.state.modal} toggle={this.toggle(0)} size="lg" position="top">
                         <MDBModalHeader toggle={this.toggle(0)} titleClass="w-100">
                           <h1>{this.state.title}</h1>
                           <h6 className="modal-tag"><i>{this.state.tagline}</i></h6>

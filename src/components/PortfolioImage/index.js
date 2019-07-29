@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap"
 import { MDBMask, MDBView } from "mdbreact";
-import "./style.css";
+
 
 function PortfolioImage(props) {
 

@@ -1,6 +1,6 @@
 .portfolio-container {
     max-width: 83%;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
 }
@@ -15,6 +15,22 @@
     align-items: center;
     justify-content: center;
 }
+
+.view.overlay {
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.rgba-black-strong, .rgba-black-strong:after {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.overlay .mask {
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+
 
 .project-title {
     color: #F2F2F2;
@@ -47,7 +63,6 @@ button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
 
 .modal-backdrop.show {
     opacity: 0.95;
-    min-height: 100%
 }
 
 p {
@@ -88,6 +103,16 @@ ul li::before {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .portfolio-container {
+        max-width: 83%;
+        min-height: 100%;
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .modal-header {
         text-align: center
     }

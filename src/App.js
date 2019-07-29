@@ -37,13 +37,15 @@ const SCROLL_KEY = process.env.FULLPAGE_SCROLL;
 
 class App extends Component {
 
- onLeave(origin, destination, direction) {
-    console.log("Leaving section " + origin.index);
-    console.log(SCROLL_KEY);
+  onLeave(origin, destination, direction) {
+      console.log("Leaving section " + origin.index);
+      console.log(SCROLL_KEY);
   }
+
   afterLoad(origin, destination, direction) {
-    console.log("After load: " + destination.index);
+      console.log("After load: " + destination.index);
   }
+
   render() {
     return (
       <div>
@@ -51,19 +53,21 @@ class App extends Component {
       <ReactFullpage
         licenseKey = {SCROLL_KEY}
         scrollOverflow={true}
-        sectionsColor={["white", "white", "white", "white"]}
+        sectionsColor={["black", "white", "black", "white"]}
+        fitToSection={false}
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
+        onModalOpen={this.onModalOpen.bind(this)}
         render={({ state, fullpageApi }) => {
           return (
             <div id="fullpage-wrapper">
               <div className="section">
                 <Landing/>
               </div>
-              <div className="section scrollable-content">
+              <div className="section fp-auto-height-responsive scrollable-content">
                 <Portfolio/>
               </div>
-              <div className="section scrollable-content">
+              <div className="section fp-auto-height-responsive scrollable-content">
                 <About/>
               </div>
               <div className="section">

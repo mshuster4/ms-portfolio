@@ -1,5 +1,7 @@
 .about-container {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    min-height: 100vh;
 }
 
 button.btn.btn-outline-black.Ripple-parent.about-button {

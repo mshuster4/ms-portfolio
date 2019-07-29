@@ -12,8 +12,8 @@ class Landing extends Component {
               <LandingContainer>
                  <LandingImg className="d-flex justify-content-start">
                     <div className="landing-content">
-                        <LandingText delay={2000}><h1 className="h1-responsive">My name is Marguerite Shuster.</h1></LandingText>
-                        <LandingText delay={3000}><h1 className="h1-responsive">I am a Web Developer and UI Designer.</h1></LandingText>
+                        <LandingText delay={1000}><h1 className="h1-responsive">My name is <span className="accent-color">Marguerite Shuster</span>.</h1></LandingText>
+                        <LandingText delay={2000}><h1 className="h1-responsive">I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span>.</h1></LandingText>
                     </div>
                  </LandingImg>
               </LandingContainer>
