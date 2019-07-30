@@ -3,3 +3,10 @@ button.btn.btn-default.Ripple-parent.contact-button {
     padding: 10px 15px;
     border-radius: 10px;
 }
+
+.contact-container {
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -9,6 +9,7 @@ class Landing extends Component {
 
     render() {
         return (
+          <div className="bg-color">
               <LandingContainer>
                  <LandingImg className="d-flex justify-content-start">
                     <div className="landing-content">
@@ -17,8 +18,10 @@ class Landing extends Component {
                     </div>
                  </LandingImg>
               </LandingContainer>
+          </div>
         );
     }
 }
+
 
 export default Landing;

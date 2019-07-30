@@ -1,6 +1,7 @@
 .about-container {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
 }
 
@@ -16,3 +17,54 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
 .card-header {
     padding: 10px 0; 
 }
+
+.head-shot {
+    max-width: 80%;
+    height: auto;
+}
+
+@media only screen and (min-width: 320px) {
+    .about-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        overflow: auto;
+        text-align: center;
+    }
+    .text-center.about-list.card {
+        margin-top: 1rem;
+    }
+
+    .head-shot {
+        max-width: 60%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+  
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .about-container {
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: auto;
+        text-align: center;
+    }
+    .text-center.about-list.card {
+        margin-top: 0;
+    }
+    
+    .head-shot {
+        max-width: 80%;
+        height: auto;
+    }
+    
+   
+}
+

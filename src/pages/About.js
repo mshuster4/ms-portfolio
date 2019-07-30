@@ -11,6 +11,7 @@ import { Row, Col } from "react-bootstrap";
 class About extends Component {
     render() {
         return (
+          <div className="bg-color">
             <AboutContainer>
                 <Row>
                   <Col sm={12}>
@@ -50,6 +51,7 @@ class About extends Component {
                     </Col>
                 </Row>
             </AboutContainer>
+          </div>
         )
     }
 }

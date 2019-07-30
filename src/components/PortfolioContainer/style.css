@@ -1,6 +1,7 @@
 .portfolio-container {
     max-width: 83%;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: auto; 
     flex-direction: column;
     justify-content: center;
 }
@@ -79,17 +80,6 @@ p {
     font-size: smaller;
 }
 
-ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-    height: 50px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-}
-
 li {
     margin-right: 1rem;
 }
@@ -102,41 +92,51 @@ ul li::before {
     width: 1.25em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 320px) {
 
     .portfolio-container {
-        max-width: 83%;
-        min-height: 100%;
-        margin-top: 4rem;
-        margin-bottom: 2.5rem;
-        flex-direction: column;
-        justify-content: center;
+        margin-top: 2rem; 
+        margin-bottom: .5rem;
     }
 
     .modal-header {
-        text-align: center
+        text-align: center;
     }
 
-    button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
-        font-size: 1rem;
-        margin: 0;
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        margin-bottom: 0;
     }
 
-    .btn-default {
-        background-color: none !important;
-        color: #F2F2F2;
-        font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .modal-header {
+        text-align: left; 
+    }
+
+    .portfolio-container {
         margin-top: 0;
         margin-bottom: 0;
     }
-    
-    .btn-default:hover {
-        background-color: none !important;
-        color: #F2F2F2;
-        outline: 1px solid #34BF8C;
-        font-size: 1rem;
-    }
-    
 
-} 
+}
 
