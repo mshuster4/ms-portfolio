@@ -3,12 +3,9 @@ html, body {
 }
 
 #root {
-   height: 100vh; 
+   height: 100%; 
 }
 
-.page-content {
-   height: 100%;
-}
 
 .bg-color {
    background-color: black;

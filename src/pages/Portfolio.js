@@ -28,7 +28,10 @@ import mongoScreenTwo from "../assets/page-images/mongo-shot-two.png";
 import projects from "../projects.json";
 
 class Portfolio extends Component {
-    state = {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
           modal: false,
           title: "",
           tagline: "",
@@ -38,9 +41,10 @@ class Portfolio extends Component {
           role: "",
           techsUsed: ""
       }
-
+  }
+  
     toggle = modalNumber => () => {
-    
+      
         if (modalNumber === 0) {
           this.setState({
             modal: !this.state.modal,
@@ -119,9 +123,11 @@ class Portfolio extends Component {
         });
       }
   }
+
    
   render() {
       return (
+        <div>
         <PortfolioContainer>
             <Row>
               <Col xs={12} md={6} lg={4}>
@@ -227,10 +233,9 @@ class Portfolio extends Component {
                   </PortfolioImage>
                 </Col>
                 </Row>
-                <Row>
-                  <Col sm={12}>
-                    <MDBModal isOpen={this.state.modal} toggle={this.toggle()} size="lg" position="top">
-                        <MDBModalHeader toggle={this.toggle()} titleClass="w-100">
+               </PortfolioContainer>
+                    <MDBModal ref={this.targetRef} showModal={this.props.showModal} hiddenModal={this.props.hiddenModal} isOpen={this.state.modal} toggle={this.toggle(this.state.modalNumber)} size="lg" position="top">
+                        <MDBModalHeader toggle={this.toggle(this.state.modalNumber)} titleClass="w-100">
                           <h1>{this.state.title}</h1>
                           <h6 className="modal-tag"><i>{this.state.tagline}</i></h6>
                         </MDBModalHeader>
@@ -266,9 +271,7 @@ class Portfolio extends Component {
                       </Button>
                     </MDBModalFooter>
                   </MDBModal>
-                  </Col>
-              </Row>
-        </PortfolioContainer>
+              </div>
       )
   }
 

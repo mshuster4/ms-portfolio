@@ -6,12 +6,12 @@ import "./style.css";
 function NavBar(props) {
 
     return (
-        <Navbar fixed="top" className="nav-bg d-sm-flex">
+        <Navbar fixed="top" className="nav-bg d-sm-flex" id="menu">
             <Nav className="d-none d-sm-inline-flex">
               <Nav.Item>
                 <Nav.Link className="nav-link"
                     href="#landing"
-                    onClick={() => props.handlePageChange("Landing")}
+                    data-menuanchor="landing"
                 >
                     <img
                         alt="logo"
@@ -25,7 +25,8 @@ function NavBar(props) {
                 <Nav.Item>
                   <Nav.Link className="nav-link"
                      href="#portfolio"
-                     onClick={() => props.handlePageChange("Portfolio")}
+                     data-menuanchor="portfolio"
+                    
                   >
                     Portfolio
                   </Nav.Link>
@@ -33,7 +34,8 @@ function NavBar(props) {
                 <Nav.Item>
                   <Nav.Link className="nav-link"
                     href="#about"
-                    onClick={() => props.handlePageChange("About")}                
+                    data-menuanchor="about"
+                              
                   >
                       About
                   </Nav.Link>
@@ -41,7 +43,8 @@ function NavBar(props) {
                 <Nav.Item>
                   <Nav.Link className="nav-link"
                      href="#contact"
-                     onClick={() => props.handlePageChange("Contact")}
+                     data-menuanchor="contact"
+                     
                   >
                     Contact
                   </Nav.Link>

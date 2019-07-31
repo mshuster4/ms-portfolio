@@ -11,16 +11,15 @@ import { Row, Col } from "react-bootstrap";
 class About extends Component {
     render() {
         return (
-          <div className="bg-color">
             <AboutContainer>
                 <Row>
                   <Col sm={12}>
                     <AboutCard className="mb-3">
                       <Row className="align-items-center">
-                        <Col sm={12} lg={{ span: 4, offset: 1}} className="d-flex justify-content-center">
+                        <Col sm={12} md={5} lg={{ span: 4, offset: 1}} className="d-flex justify-content-center">
                           <AboutImage/>
                         </Col>
-                        <Col sm={12} lg={6}>
+                        <Col sm={12} md={7} lg={6}>
                           <AboutText></AboutText>
                           <Button
                             outline={true}
@@ -43,15 +42,14 @@ class About extends Component {
                   </Col>
                 </Row>
                 <Row>
-                    <Col sm={6} lg={6}>
+                    <Col sm={12} md={6} lg={6}>
                         <DevelopmentSkills/>
                     </Col>
-                    <Col sm={6} lg={6}>
+                    <Col sm={12} md={6} lg={6}>
                         <DesignSkills/>
                     </Col>
                 </Row>
             </AboutContainer>
-          </div>
         )
     }
 }

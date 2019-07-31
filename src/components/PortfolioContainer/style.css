@@ -1,7 +1,6 @@
 .portfolio-container {
     max-width: 83%;
     min-height: 100vh;
-    overflow: auto; 
     flex-direction: column;
     justify-content: center;
 }
@@ -64,7 +63,9 @@ button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
 
 .modal-backdrop.show {
     opacity: 0.95;
+    height: 100%;
 }
+
 
 p {
     font-size:  smaller;
@@ -139,4 +140,6 @@ ul li::before {
     }
 
 }
+
+
 

@@ -54,17 +54,25 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
         padding-top: 0;
         padding-bottom: 0;
         overflow: auto;
-        text-align: center;
+        text-align: left;
     }
     .text-center.about-list.card {
         margin-top: 0;
     }
     
     .head-shot {
-        max-width: 80%;
+        max-width: 100%;
         height: auto;
     }
     
    
 }
+
+
+@media only screen and (min-width: 992px) {
+   .head-shot {
+       max-width: 80%;
+       height: auto;
+   }
+} 
 
