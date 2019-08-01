@@ -36,7 +36,7 @@ library.add(
 );
 
 const fullpageProps = {
-  licenseKey: "8C1670EB-87A2452C-B87437C8-FD4AECCD",
+  licenseKey: "",
   anchors: ["landing", "portfolio", "about", "contact"],
   menu: true,
   sectionsColor: ["black", "white", "black", "white"],
@@ -70,7 +70,7 @@ const FullpageWrapper = () => (
                   }}
                 >
                 <Portfolio
-                        showModal={() =>{fullpageApi.setAllowScrolling(false);; console.log("modalOn")}}
+                        showModal={() =>{fullpageApi.setAllowScrolling(false); console.log("modalOn")}}
                         hiddenModal={() => {fullpageApi.setAllowScrolling(true); console.log(fullpageApi, state, "modalOff")}}
                   />
                 </div>
