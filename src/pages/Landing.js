@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+
 import LandingContainer from "../components/LandingContainer";
 import LandingText from "../components/LandingText";
 import LandingImg from "../components/LandingImg";
+import Button from "../components/Button";
+import Icon from "../components/Icon";
 
 
 class Landing extends Component {
@@ -13,8 +15,19 @@ class Landing extends Component {
               <LandingContainer>
                  <LandingImg className="d-flex justify-content-start">
                     <div className="landing-content">
-                        <LandingText delay={1000}><h1 className="h1-responsive">My name is <span className="accent-color">Marguerite Shuster</span>.</h1></LandingText>
-                        <LandingText delay={2000}><h1 className="h1-responsive">I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span>.</h1></LandingText>
+                       <div className="headline-container">
+                            <LandingText delay={1000}><h1 className="h1-responsive">My name is <span className="accent-color">Marguerite Shuster</span>.</h1></LandingText>
+                            <LandingText delay={2000}><h1 className="h1-responsive">I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span>.</h1></LandingText>
+                        </div>
+                        <div className="button-container">
+                            <LandingText>
+                            <a href="#portfolio" className="landing-link" data-menuanchor="landing">
+                                <Button className="landing-botton" outline={true}>
+                                View My Creations <Icon icon={["fas", "arrow-down"]} />
+                                </Button>
+                            </a>
+                            </LandingText>
+                        </div>
                     </div>
                  </LandingImg>
               </LandingContainer>

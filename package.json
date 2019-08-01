@@ -14,6 +14,7 @@
     "body-scroll-lock": "^2.6.4",
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
+    "hover.css": "^2.3.2",
     "lodash": "^4.17.15",
     "mdbreact": "^4.15.0",
     "prop-types": "^15.7.2",

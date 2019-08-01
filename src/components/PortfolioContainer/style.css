@@ -66,6 +66,11 @@ button.btn.btn-default.btn-sm.Ripple-parent.portfolio-button {
     height: 100%;
 }
 
+.modal.fade.top.show {
+    padding-top: 2rem; 
+}
+
+
 
 p {
     font-size:  smaller;
@@ -96,8 +101,8 @@ ul li::before {
 @media only screen and (min-width: 320px) {
 
     .portfolio-container {
-        margin-top: 2rem; 
-        margin-bottom: .5rem;
+        margin-top: 4rem; 
+        margin-bottom: 4rem;
     }
 
     .modal-header {
@@ -135,11 +140,38 @@ ul li::before {
     }
 
     .portfolio-container {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) { 
+
+    .portfolio-container {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .button-container {
+        height: 60%;
+    }
+
+    .headline-container {
+        height: 22%;
     }
 
 }
 
 
 
+@media only screen and (min-width: 992px) {
+  .portfolio-container {
+      margin-top: 0; 
+      margin-bottom: 0;
+  }
+
+} 

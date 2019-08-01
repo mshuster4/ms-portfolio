@@ -18,7 +18,8 @@ import {
   faSquare,
   faCheckSquare,
   faRocket,
-  faBookOpen
+  faBookOpen,
+  faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -30,7 +31,8 @@ library.add(
   faSquare,
   faCheckSquare,
   faRocket,
-  faBookOpen
+  faBookOpen,
+  faArrowDown
 );
 
 const fullpageProps = {
@@ -40,13 +42,14 @@ const fullpageProps = {
   sectionsColor: ["black", "white", "black", "white"],
   callbacks: ["onLeave", "destroy", "reBuild"],
   scrollOverflow: true,
-  fitToSection: false
+  fitToSection: true
 };
 
  
 const FullpageWrapper = () => (
     <ReactFullpage
         {...fullpageProps}
+        afterReBuild= {(console.log("rebuilt"))}
         render={({ state, fullpageApi }) => {
         console.log("render prop change", state, fullpageApi)
         
@@ -62,17 +65,15 @@ const FullpageWrapper = () => (
                 <div
                   style={{
                     overflow: "scroll",
-                    height: 1,
+                    height: "auto",
                     backgroundColor: "white",
                   }}
                 >
-                </div>
-                  <div>
-                      <Portfolio
-                        showModal={() =>{fullpageApi.setAllowScrolling(false); console.log("modalOn")}}
+                <Portfolio
+                        showModal={() =>{fullpageApi.setAllowScrolling(false);; console.log("modalOn")}}
                         hiddenModal={() => {fullpageApi.setAllowScrolling(true); console.log(fullpageApi, state, "modalOff")}}
-                      />
-                  </div>
+                  />
+                </div>
               </div>
             </div>
             <div className="section">

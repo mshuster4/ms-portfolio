@@ -267,7 +267,7 @@ class Portfolio extends Component {
                           className="ml-3 mt-0 mb-0"
 
                       >
-                        View Github <Icon icon={["fas", "book-open"]} />
+                        View Github <Icon icon={["fab", "git-hub"]} />
                       </Button>
                     </MDBModalFooter>
                   </MDBModal>
