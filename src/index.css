@@ -10,3 +10,18 @@ html, body {
 .bg-color {
    background-color: black;
 }
+
+.contact-page {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   min-height: 100vh;
+}
+
+@media only screen and (min-width: 992px) {
+   .contact-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+   }
+} 

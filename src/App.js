@@ -43,7 +43,7 @@ const fullpageProps = {
   sectionsColor: ["black", "white", "black", "white"],
   callbacks: ["onLeave", "destroy", "reBuild"],
   scrollOverflow: true,
-  fitToSection: true
+  fitToSection: true,
 };
 
  
@@ -80,9 +80,11 @@ const FullpageWrapper = () => (
             <div className="section">
             <About/>
             </div>
-              <div className="section">
-              <Contact/>
-              <Footer/>
+            <div className="section">
+              <div className="contact-page">
+                <Contact/>
+                <Footer/>
+              </div>
             </div>
           </div>
         );
