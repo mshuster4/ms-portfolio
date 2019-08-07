@@ -1,5 +1,4 @@
 import React, { Component}  from 'react';
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import ReactFullpage from '@fullpage/react-fullpage';
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
@@ -35,8 +34,10 @@ library.add(
   faArrowDown
 );
 
+const key = process.env.REACT_APP_FULLPAGE_API_KEY;
+
 const fullpageProps = {
-  licenseKey: "",
+  licenseKey: key,
   anchors: ["landing", "portfolio", "about", "contact"],
   menu: true,
   sectionsColor: ["black", "white", "black", "white"],
