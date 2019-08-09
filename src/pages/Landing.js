@@ -20,12 +20,12 @@ class Landing extends Component {
                             <LandingText delay={2000}><h1 className="h1-responsive">I am a <span className="accent-color">Web Developer</span> and <span className="accent-color"> UI Designer</span>.</h1></LandingText>
                         </div>
                         <div className="button-container">
-                            <LandingText>
-                            <a href="#portfolio" className="landing-link" data-menuanchor="landing">
-                                <Button className="landing-botton" outline={true}>
-                                View My Creations <Icon icon={["fas", "arrow-down"]} />
-                                </Button>
-                            </a>
+                            <LandingText delay={3000}>
+                                <a href="#portfolio" className="landing-link" data-menuanchor="landing">
+                                    <Button className="landing-botton" outline={true}>
+                                      View My Creations 
+                                    </Button>
+                                </a>
                             </LandingText>
                         </div>
                     </div>

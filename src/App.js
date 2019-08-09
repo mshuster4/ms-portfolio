@@ -1,4 +1,6 @@
-import React, { Component}  from 'react';
+import React, { Component, useRef, useEffect }  from 'react';
+import * as Scroll from 'react-scroll';
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import ReactFullpage from '@fullpage/react-fullpage';
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
@@ -41,16 +43,18 @@ const fullpageProps = {
   anchors: ["landing", "portfolio", "about", "contact"],
   menu: true,
   sectionsColor: ["black", "white", "black", "white"],
-  callbacks: ["onLeave", "destroy", "reBuild"],
   scrollOverflow: true,
   fitToSection: true,
 };
 
- 
+
+
+
 const FullpageWrapper = () => (
+
     <ReactFullpage
         {...fullpageProps}
-        afterReBuild= {(console.log("rebuilt"))}
+        afterRender={console.log("here")}
         render={({ state, fullpageApi }) => {
         console.log("render prop change", state, fullpageApi)
         
@@ -63,18 +67,18 @@ const FullpageWrapper = () => (
             </div>
             <div className="section">
               <div className="slide">
-                <div
-                  style={{
-                    overflow: "scroll",
-                    height: "auto",
-                    backgroundColor: "white",
-                  }}
-                >
-                <Portfolio
-                        showModal={() =>{fullpageApi.setAllowScrolling(false); console.log("modalOn")}}
-                        hiddenModal={() => {fullpageApi.setAllowScrolling(true); console.log(fullpageApi, state, "modalOff")}}
-                  />
-                </div>
+                  <div
+                    style={{
+                      overflow: "scroll",
+                      height: "auto",
+                      backgroundColor: "white",
+                    }}
+                  >
+                      <Portfolio
+                              showModal={() =>{fullpageApi.setAllowScrolling(false)}}
+                              hiddenModal={() => {fullpageApi.setAllowScrolling(true); console.log(fullpageApi, state, "modalOff")}}
+                        />
+                  </div>
               </div>
             </div>
             <div className="section">

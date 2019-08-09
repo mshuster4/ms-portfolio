@@ -30,6 +30,8 @@
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.12",
     "react-scroll-parallax": "^2.1.2",
+    "react-scroll-to": "^2.0.10",
+    "react-scroll-up": "^1.3.3",
     "react-spring": "^8.0.27",
     "scrollmonitor": "^1.2.4"
   },

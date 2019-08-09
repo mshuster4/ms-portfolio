@@ -124,7 +124,6 @@ class Portfolio extends Component {
       }
   }
 
-   
   render() {
       return (
         <div>
@@ -139,7 +138,7 @@ class Portfolio extends Component {
                       <Button
                           onClick = {this.toggle(0)}
                           className = "portfolio-button"
-                          outline={false}
+                          outline={true}
                           size = "sm"
 
                       >
@@ -155,9 +154,9 @@ class Portfolio extends Component {
                   >
                     <h5 className="project-title">Reading Wishlist</h5>
                      <Button
-                        onClick = {this.toggle(1)}
+                         onClick = {this.toggle(1)}
                          className = "portfolio-button"
-                         outline={false}
+                         outline={true}
                          size = "sm"
                       >
                       Learn More <Icon icon={["fas", "book-open"]} />
@@ -174,7 +173,7 @@ class Portfolio extends Component {
                       <Button
                         onClick = {this.toggle(2)}
                         className = "portfolio-button"
-                        outline={false}
+                        outline={true}
                         size = "sm"
                       >
                       Learn More <Icon icon={["fas", "book-open"]} />
@@ -191,7 +190,7 @@ class Portfolio extends Component {
                       <Button
                         onClick = {this.toggle(3)}
                         className = "portfolio-button"
-                        outline={false}
+                        outline={true}
                         size = "sm"
                       >
                       Learn More <Icon icon={["fas", "book-open"]} />
@@ -208,7 +207,7 @@ class Portfolio extends Component {
                      <Button
                         onClick = {this.toggle(4)}
                         className = "portfolio-button"
-                        outline={false}
+                        outline={true}
                         size = "sm"
                       >
                       Learn More <Icon icon={["fas", "book-open"]} />
@@ -225,7 +224,7 @@ class Portfolio extends Component {
                     <Button
                       onClick = {this.toggle(5)}
                       className = "portfolio-button"
-                      outline={false}
+                      outline={true}
                       size = "sm"
                     >
                       Learn More <Icon icon={["fas", "book-open"]} />
@@ -267,7 +266,7 @@ class Portfolio extends Component {
                           className="ml-3 mt-0 mb-0"
 
                       >
-                        View Github <Icon icon={["fab", "git-hub"]} />
+                        View Github <Icon icon={["fab", "github"]} />
                       </Button>
                     </MDBModalFooter>
                   </MDBModal>
