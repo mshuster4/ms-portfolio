@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AboutCard from "../components/AboutCard";
+import PageCard from "../components/PageCard";
 import ContactForm from "../components/ContactForm";
 import ContactContainer from "../components/ContactContainer";
 import Footer from "../components/Footer"
@@ -14,9 +14,9 @@ class Contact extends Component {
           <ContactContainer>
             <Row>
               <Col sm={12}>
-                <AboutCard>
+                <PageCard>
                    <ContactForm/>
-                </AboutCard>
+                </PageCard>
               </Col>
             </Row>
           </ContactContainer>

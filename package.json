@@ -26,6 +26,7 @@
     "react-flippy": "^0.1.2",
     "react-page-scroller": "^1.5.1",
     "react-parallax": "^2.2.0",
+    "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.12",

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from 'react-bootstrap'
 
-function AboutCard (props) {
+function PageCard (props) {
     return(
         <Card className={props.className}>
             <Card.Body>
@@ -11,4 +11,4 @@ function AboutCard (props) {
     );
 }
 
-export default AboutCard;
+export default PageCard;

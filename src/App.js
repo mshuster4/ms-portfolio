@@ -1,13 +1,20 @@
-import React, { Component, useRef, useEffect }  from 'react';
-import * as Scroll from 'react-scroll';
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import ReactFullpage from '@fullpage/react-fullpage';
+import React, { Component } from "react";
 import NavBar from "./components/NavBar";
-import Landing from "./pages/Landing";
-import Portfolio from "./pages/Portfolio"
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Footer from "./components/Footer"
+import FullPageWrapper from "./pages/FullPageWrapper";
+import PageModal from "./pages/PageModal"
+import blockScreenOne from "./assets/page-images/block-party-shot-one.png";
+import blockScreenTwo from "./assets/page-images/block-party-shot-two.png";
+import campScreenOne from "./assets/page-images/camp-shot-one.png";
+import campScreenTwo from "./assets/page-images/camp-shot-two.png";
+import readingScreenOne from "./assets/page-images/reading-shot-one.png"
+import readingScreenTwo from "./assets/page-images/reading-shot-two.png"
+import friendScreenOne from "./assets/page-images/friend-shot-one.png"
+import friendScreenTwo from "./assets/page-images/friend-shot-two.png"
+import brewsScreenOne from "./assets/page-images/brews-shot-one.png";
+import brewsScreenTwo from "./assets/page-images/brews-shot-two.png";
+import mongoScreenOne from "./assets/page-images/mongo-shot-one.png";
+import mongoScreenTwo from "./assets/page-images/mongo-shot-two.png";
+import projects from "./projects.json";
 import "./index.css"
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -36,77 +43,139 @@ library.add(
   faArrowDown
 );
 
-const key = process.env.REACT_APP_FULLPAGE_API_KEY;
 
-const fullpageProps = {
-  licenseKey: key,
-  anchors: ["landing", "portfolio", "about", "contact"],
-  menu: true,
-  sectionsColor: ["black", "white", "black", "white"],
-  scrollOverflow: true,
-  fitToSection: true,
+class App extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      title: "",
+      tagline: "",
+      description: "",
+      role: "",
+      imageOne: "",
+      imageTwo: "",
+      techsUsed: [],
+    }
+    console.log(this.props)
+    this.toggle.bind(this);
+    this.onCloseModal.bind(this);
+  }
+ 
+  toggle = (num) => {
+
+
+  if (num === 0) {
+    this.setState({ 
+        modal: !this.state.modal,
+        title: projects[0].title,
+        tagline: projects[0].tagline,
+        imageOne: blockScreenOne,
+        imageTwo: blockScreenTwo,
+        description: projects[0].description,
+        role: projects[0].role,
+        techsUsed: projects[0].techsUsed
+      });
+  }
+
+  else if (num === 1) {
+      this.setState({
+          modal: true,
+          title: projects[1].title,
+          tagline: projects[1].tagline,
+          imageOne: readingScreenOne,
+          imageTwo: readingScreenTwo,
+          description: projects[1].description,
+          techsUsed: projects[1].techsUsed
+      })
+  }
+  
+  else if (num === 2) {
+    this.setState({ 
+        modal: true,
+        title: projects[2].title,
+        tagline: projects[2].tagline,
+        imageOne: friendScreenOne,
+        imageTwo: friendScreenTwo,
+        description: projects[2].description,
+        techsUsed: projects[2].techsUsed
+      });
+  }
+
+  else if (num === 3) {
+    this.setState({
+        modal: true,
+        title: projects[3].title,
+        tagline: projects[3].tagline,
+        imageOne: campScreenOne,
+        imageTwo: campScreenTwo,
+        description: projects[3].description,
+        role: projects[3].role,
+        techsUsed: projects[3].techsUsed
+    })
+  }
+
+  else if (num === 4) {
+    this.setState({
+        modal: true,
+        title: projects[4].title,
+        tagline: projects[4].tagline,
+        imageOne: brewsScreenOne,
+        imageTwo: brewsScreenTwo,
+        description: projects[4].description,
+        role: projects[4].role,
+        techsUsed: projects[4].techsUsed,
+    })
+  }
+
+  else if (num === 5) {
+    this.setState({
+        modal: true,
+        title: projects[5].title,
+        tagline: projects[5].tagline,
+        imageOne: mongoScreenOne,
+        imageTwo: mongoScreenTwo,
+        description: projects[5].description,
+        techsUsed: projects[5].techsUsed
+    })
+  }
+};
+
+  onCloseModal = () => {
+
+    this.setState({ 
+      modal: false,
+      title: "",
+      tagline: "",
+      description: "",
+      role: "",
+      imageOne: "",
+      imageTwo: "",
+      techsUsed: []
+    });
 };
 
 
-
-
-const FullpageWrapper = () => (
-
-    <ReactFullpage
-        {...fullpageProps}
-        afterRender={console.log("here")}
-        render={({ state, fullpageApi }) => {
-        console.log("render prop change", state, fullpageApi)
-        
-         // eslint-disable-line no-console
-
-        return (
-          <div id="fullpage-wrapper">
-            <div className="section">
-              <Landing/>
-            </div>
-            <div className="section">
-              <div className="slide">
-                  <div
-                    style={{
-                      overflow: "scroll",
-                      height: "auto",
-                      backgroundColor: "white",
-                    }}
-                  >
-                      <Portfolio
-                              showModal={() =>{fullpageApi.setAllowScrolling(false)}}
-                              hiddenModal={() => {fullpageApi.setAllowScrolling(true); console.log(fullpageApi, state, "modalOff")}}
-                        />
-                  </div>
-              </div>
-            </div>
-            <div className="section">
-            <About/>
-            </div>
-            <div className="section">
-              <div className="contact-page">
-                <Contact/>
-                <Footer/>
-              </div>
-            </div>
-          </div>
-        );
-        }}
-    
-    />
-
-  );
-
- 
-
-class App extends Component {
-
   render() {
+
     return (
       <div id="App">
         <NavBar/>
-        <FullpageWrapper/>
+        <FullPageWrapper 
+           toggle={this.toggle}
+        />
+        <PageModal
+          modal={this.state.modal}
+          isOpen={this.state.modal}
+          onClose={this.onCloseModal}
+          title={this.state.title}
+          tagline={this.state.tagline}
+          imageOne={this.state.imageOne}
+          imageTwo={this.state.imageTwo}
+          description={this.state.description}
+          role={this.state.role}
+          techsUsed={this.state.techsUsed}
+        />
       </div>
        
     );

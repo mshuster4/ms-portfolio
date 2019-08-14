@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import AboutContainer from "../components/AboutContainer";
-import AboutCard from "../components/AboutCard";
+import PageCard from "../components/PageCard";
 import AboutText from "../components/AboutText";
 import Button from "../components/Button";
 import AboutImage from "../components/AboutImage"
@@ -14,7 +14,7 @@ class About extends Component {
             <AboutContainer>
                 <Row>
                   <Col sm={12}>
-                    <AboutCard className="mb-3">
+                    <PageCard className="mb-3">
                       <Row className="align-items-center">
                         <Col sm={12} md={5} lg={{ span: 4, offset: 1}} className="d-flex justify-content-center">
                           <AboutImage/>
@@ -38,7 +38,7 @@ class About extends Component {
                         </Col>
                         <Col lg={1}></Col>
                       </Row>
-                    </AboutCard>
+                    </PageCard>
                   </Col>
                 </Row>
                 <Row>

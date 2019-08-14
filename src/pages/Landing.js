@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import LandingContainer from "../components/LandingContainer";
 import LandingText from "../components/LandingText";
 import LandingImg from "../components/LandingImg";
