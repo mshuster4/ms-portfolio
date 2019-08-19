@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import NavBar from "./components/NavBar";
-import FullPageWrapper from "./pages/FullPageWrapper";
+import Portfolio from "./pages/Portfolio"
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer"
+import Landing from "./pages/Landing"
 import PageModal from "./pages/PageModal"
 import blockScreenOne from "./assets/page-images/block-party-shot-one.png";
 import blockScreenTwo from "./assets/page-images/block-party-shot-two.png";
@@ -45,7 +49,8 @@ library.add(
 
 
 class App extends Component {
-   constructor(props) {
+
+  constructor(props) {
     super(props);
     this.state = {
       modal: false,
@@ -62,12 +67,12 @@ class App extends Component {
     this.onCloseModal.bind(this);
   }
  
-  toggle = (num) => {
+toggle = (num) => {
 
 
   if (num === 0) {
     this.setState({ 
-        modal: !this.state.modal,
+        modal: true,
         title: projects[0].title,
         tagline: projects[0].tagline,
         imageOne: blockScreenOne,
@@ -153,34 +158,38 @@ class App extends Component {
       imageTwo: "",
       techsUsed: []
     });
+
 };
 
 
   render() {
-
     return (
-      <div id="App">
-        <NavBar/>
-        <FullPageWrapper 
-           toggle={this.toggle}
-        />
-        <PageModal
-          modal={this.state.modal}
-          isOpen={this.state.modal}
-          onClose={this.onCloseModal}
-          title={this.state.title}
-          tagline={this.state.tagline}
-          imageOne={this.state.imageOne}
-          imageTwo={this.state.imageTwo}
-          description={this.state.description}
-          role={this.state.role}
-          techsUsed={this.state.techsUsed}
-        />
-      </div>
-       
+      <div>
+       <NavBar/>
+       <Landing/>
+       <div>
+          <PageModal
+            show={this.state.modal}
+            onHide={this.onCloseModal}
+            title={this.state.title}
+            tagline={this.state.tagline}
+            imageOne={this.state.imageOne}
+            imageTwo={this.state.imageTwo}
+            description={this.state.description}
+            role={this.state.role}
+            techsUsed={this.state.techsUsed}
+          />
+       </div>
+       <Portfolio
+         toggle={(num) => this.toggle(num)}
+       />
+       <About/>
+       <Contact/>
+       <Footer/>
+    </div>
+
     );
   }
 }
-
 
 export default App;

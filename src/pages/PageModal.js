@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Modal from 'react-bootstrap/Modal'
 import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
@@ -11,18 +12,18 @@ import ModalList from "../components/ModalList";
           constructor(props) {
             super(props);
             console.log(this.props);
-
          }
 
          render() {
 
          return (
-         <MDBContainer>
-          <MDBModal size="lg" showModal={this.props.showModal} isOpen={this.props.modal} toggle={this.props.toggle} onClose={this.props.onClose}>    
+         <Modal show={this.props.show} onHide={this.props.onHide} size="lg">
+          <Modal.Header closeButton>  
             <MDBModalHeader titleClass="w-100" toggle={this.props.onClose}>
                 <h1>{this.props.title}</h1>
                 <h6 className="modal-tag"><i>{this.props.tagline}</i></h6>
-                </MDBModalHeader>
+            </MDBModalHeader>
+          </Modal.Header>
                 <MDBModalBody>
                 <ModalImages
                     imageOne = {this.props.imageOne}
@@ -54,8 +55,7 @@ import ModalList from "../components/ModalList";
                 View Github <Icon icon={["fab", "github"]} />
             </Button>
             </MDBModalFooter>
-          </MDBModal>
-        </MDBContainer>
+          </Modal>
     );
   }
 }
