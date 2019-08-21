@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Modal from 'react-bootstrap/Modal'
-import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from "mdbreact";
+import { Modal, Row, Col } from 'react-bootstrap/'
+import { MDBModalBody, MDBModalFooter, MDBBtn } from "mdbreact";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
 import ModalImages from "../components/ModalImages";
@@ -17,13 +17,13 @@ import ModalList from "../components/ModalList";
          render() {
 
          return (
-         <Modal show={this.props.show} onHide={this.props.onHide} size="lg">
-          <Modal.Header closeButton>  
-            <MDBModalHeader titleClass="w-100" toggle={this.props.onClose}>
+         <Modal show={this.props.show} onHide={this.props.onHide} size="lg"> 
+            <Modal.Header closeButton>
+              <div>
                 <h1>{this.props.title}</h1>
                 <h6 className="modal-tag"><i>{this.props.tagline}</i></h6>
-            </MDBModalHeader>
-          </Modal.Header>
+              </div>
+            </Modal.Header>
                 <MDBModalBody>
                 <ModalImages
                     imageOne = {this.props.imageOne}
@@ -36,24 +36,32 @@ import ModalList from "../components/ModalList";
                 />
             </MDBModalBody>
             <MDBModalFooter className="display-flex justify-content-start">
-            <Button
-                outline={true}
-                size = "md"
-                color="black"
-                className="mt-0 mb-0"
+                <MDBBtn
+                    outline={true}
+                    size = "md"
+                    color="black"
+                    className="mt-0 mb-0"
+                    href={this.props.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tag="a"
 
-            >
-                Launch Demo <Icon icon={["fas", "book-open"]} />
-            </Button>
-            <Button
-                outline={true}
-                color="black"
-                size = "md"
-                className="ml-3 mt-0 mb-0"
+                >
+                    Launch Demo <Icon icon={["fas", "rocket"]} />
+                </MDBBtn>
+                 <MDBBtn
+                    outline={true}
+                    size = "md"
+                    color="black"
+                    className="mt-0 mb-0"
+                    href={this.props.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tag="a"
 
-            >
-                View Github <Icon icon={["fab", "github"]} />
-            </Button>
+                >
+                    View Github <Icon icon={["fab", "github"]} />
+                </MDBBtn>
             </MDBModalFooter>
           </Modal>
     );

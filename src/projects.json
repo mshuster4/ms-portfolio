@@ -4,21 +4,27 @@
         "tagline": "Neighborhood bulletin board for buying, selling, and promoting",
         "description": "My team was tasked with creating a CRUD application using a SQL database.  We decided to create an app for neighborhood members to serve as both users and moderators of their own community forum.  Block Party features three distinct message boards: Karma Angles for offering goods/services, Choosy Beggars for requesting goods/services, and Nosey Neighbors for promoting events.  To accomplish this, we created three different tables within one database and used Handlebars.js to display users’ posts on individual pages.",
         "role": "I designed Blockparty's UI and developed the entire Frontend.",
-        "techsUsed": [ "HTML", "CSS", "Bootstrap", "Sequelize", "Node.js", "Handlebars.js", "Mocha and Chai (tesing)", "Heroku (deployment)"]
+        "techsUsed": [ "HTML", "CSS", "Bootstrap", "Sequelize", "Node.js", "Handlebars.js", "Mocha and Chai (tesing)", "Heroku (deployment)"],
+        "github": "https://github.com/mshuster4/Block-Party",
+        "demo": "https://blockpartyucsd.herokuapp.com/"
     
     },
     {
         "title": "Reading Wishlist",
         "tagline": "Search engine for discovering and saving books",
         "description": "This application allows users to quickly search for books with the option to save them for future reference.  Users can choose from  a variety of search parameters including: title, author, topic, or keyword.  I used the GoogleBooks API to grab all books related to input and MongoDB to store saved data.",
-        "techsUsed": ["HTML", "CSS", "Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"]
+        "techsUsed": ["HTML", "CSS", "Bootstrap", "React.js", "Node.js", "MongoDB", "Heroku (deployment)"],
+        "github": "https://github.com/mshuster4/Book-Search-React",
+        "demo": "https://rocky-cliffs-93730.herokuapp.com/"
 
     },
     {
         "title": "Friend Finder",
         "tagline": "Survey designed to connect people based on their personal values",
         "description": "This application asks ten questions with likert scales answer options to quantify and calculate a user’s values.  At the end of the survey, the user is shown whichever previous test taker matches closest to his/her scores.  To implement matchmaking, I used Express.js to get and post data from a server-side API.",
-        "techsUsed": ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js", "JQuery", "Heroku (deployment)"]
+        "techsUsed": ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js", "Express.js", "JQuery", "Heroku (deployment)"],
+        "github": "https://github.com/mshuster4/Friend-Finder",
+        "demo": "https://calm-springs-34430.herokuapp.com/"
 
     },
     {
@@ -27,7 +33,9 @@
         "tagline": "Collection of games created to sharpen critical thinking and job interview skills",
         "description": "For this project, my team was tasked with creating a MERN stack application.  We decided to create a series of brain-building games and technical interview related quizzes.  Each player’s game scores are displayed on a leaderboard, as well as posted to a user’s profile.",
         "role": "My main role was the group’s UI designer/Frontend Developer.  I used Adobe Illustrator to create the main logo each game icon.  Additionally, I also developed all technical interview quizzes (excluding Quiz Bowl) as well as a timed logical game.",
-        "techsUsed": ["HTML", "CSS", "Adobe Illustrator", "Bootstrap", "React.js", "Node.js", "Express.js", "MongoDB"]
+        "techsUsed": ["HTML", "CSS", "Adobe Illustrator", "Bootstrap", "React.js", "Node.js", "Express.js", "MongoDB"],
+        "github": "https://github.com/mshuster4/Camp-Wanna-Mongo",
+        "demo": "https://camp-wanna-mongo.herokuapp.com/"
 
     },
     {
@@ -36,7 +44,9 @@
         "tagline": " Entertainment calendar made to ease the stress of planning a night out.",
         "description": "The goal for this project was to give users event and brewery options based on  the city, state, and/or timeframe entered.  This application was developed especially for travelers visiting unfamiliar cities.  OpenBreweryDB and Ticketmaster APIs were used to supply application data.",
         "role": "I served as my team's UI designer/developer.",
-        "techsUsed": ["HTML", "CSS", "Bootstrap", "JavaScript", "JQuery"]
+        "techsUsed": ["HTML", "CSS", "Bootstrap", "JavaScript", "JQuery", "AJAX"],
+        "github": "https://github.com/mshuster4/Brews-and-Beats",
+        "demo": "https://mshuster4.github.io/Brews-and-Beats/"
 
     },
     {
@@ -44,7 +54,9 @@
         "title": "Mongo News Scraper",
         "tagline": "Displays the latest in Music News and Commentary",
         "description": "This Application utilizes a web scraping button to display articles from the music world.  Users also have the option to save and comment on articles.  I used MongoDB to store saved articles and comments.",
-        "techsUsed": ["HTML", "CSS", "Bootstrap", "Handlebars.js", "Express.js", "MongoDB", "Cheerio (scraping)", "Heroku (deployment)"]
+        "techsUsed": ["HTML", "CSS", "Bootstrap", "Handlebars.js", "Express.js", "MongoDB", "Cheerio (scraping)", "Heroku (deployment)"],
+        "github": "https://github.com/mshuster4/News-Scrape",
+        "demo": "https://powerful-ridge-13042.herokuapp.com/"
 
     }
 

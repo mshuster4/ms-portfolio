@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import Portfolio from "./pages/Portfolio"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer"
 import Landing from "./pages/Landing"
 import PageModal from "./pages/PageModal"
 import blockScreenOne from "./assets/page-images/block-party-shot-one.png";
@@ -61,6 +60,8 @@ class App extends Component {
       imageOne: "",
       imageTwo: "",
       techsUsed: [],
+      demo: "",
+      github: ""
     }
     console.log(this.props)
     this.toggle.bind(this);
@@ -79,7 +80,9 @@ toggle = (num) => {
         imageTwo: blockScreenTwo,
         description: projects[0].description,
         role: projects[0].role,
-        techsUsed: projects[0].techsUsed
+        techsUsed: projects[0].techsUsed,
+        demo: projects[0].demo,
+        github: projects[0].github
       });
   }
 
@@ -91,7 +94,9 @@ toggle = (num) => {
           imageOne: readingScreenOne,
           imageTwo: readingScreenTwo,
           description: projects[1].description,
-          techsUsed: projects[1].techsUsed
+          techsUsed: projects[1].techsUsed,
+          demo: projects[1].demo,
+          github: projects[1].github
       })
   }
   
@@ -103,7 +108,9 @@ toggle = (num) => {
         imageOne: friendScreenOne,
         imageTwo: friendScreenTwo,
         description: projects[2].description,
-        techsUsed: projects[2].techsUsed
+        techsUsed: projects[2].techsUsed,
+        demo: projects[2].demo,
+        github: projects[2].github
       });
   }
 
@@ -116,7 +123,9 @@ toggle = (num) => {
         imageTwo: campScreenTwo,
         description: projects[3].description,
         role: projects[3].role,
-        techsUsed: projects[3].techsUsed
+        techsUsed: projects[3].techsUsed,
+        demo: projects[3].demo,
+        github: projects[3].github
     })
   }
 
@@ -130,6 +139,8 @@ toggle = (num) => {
         description: projects[4].description,
         role: projects[4].role,
         techsUsed: projects[4].techsUsed,
+        demo: projects[4].demo,
+        github: projects[4].github
     })
   }
 
@@ -141,7 +152,9 @@ toggle = (num) => {
         imageOne: mongoScreenOne,
         imageTwo: mongoScreenTwo,
         description: projects[5].description,
-        techsUsed: projects[5].techsUsed
+        techsUsed: projects[5].techsUsed,
+        demo: projects[5].demo,
+        github: projects[5].github
     })
   }
 };
@@ -178,6 +191,8 @@ toggle = (num) => {
             description={this.state.description}
             role={this.state.role}
             techsUsed={this.state.techsUsed}
+            demo={this.state.demo}
+            github={this.state.github}
           />
        </div>
        <Portfolio
@@ -185,7 +200,6 @@ toggle = (num) => {
        />
        <About/>
        <Contact/>
-       <Footer/>
     </div>
 
     );

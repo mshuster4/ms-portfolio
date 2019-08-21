@@ -24,6 +24,7 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
     "react-flippy": "^0.1.2",
+    "react-lazyload": "^2.6.2",
     "react-page-scroller": "^1.5.1",
     "react-parallax": "^2.2.0",
     "react-responsive-modal": "^4.0.1",

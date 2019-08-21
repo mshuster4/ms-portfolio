@@ -10,12 +10,13 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
 }
 
 .list-group-item {
-    padding: 10px 0;
+    padding: 10px 0 0 0;
     border: none !important 
 }
 
-.card {
+.skills-card {
     box-shadow: 3px 3px 10px 2px #737373;
+    padding-bottom: 10px;
 }
 
 .card-header {
@@ -89,6 +90,7 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
    .head-shot {
        max-width: 80%;
        height: auto;
+       margin-bottom: 0;
    }
 } 
 

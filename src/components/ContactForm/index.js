@@ -31,8 +31,7 @@ class ContactForm extends Component {
   render() {
         return(
           <div>
-            <form>
-              <p className="h4 text-center py-4">Contact</p>
+          <form>
               <div className="grey-text">
                 <MDBInput
                   label="Name"
@@ -66,8 +65,6 @@ class ContactForm extends Component {
                   name="message"
                   value={this.state.message}
                   onInput={this.handleInput}/>
-              </div>
-              <div className="text-center py-4 mt-3">
               </div>
             </form>
           </div>

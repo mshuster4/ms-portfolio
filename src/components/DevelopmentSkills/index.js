@@ -5,8 +5,8 @@ import "./style.css"
 function DevelopmentSkills() {
     return (
         <div className="skills-list">
-            <Card className="text-center"> 
-                <Card.Header>Development Skills</Card.Header>
+            <Card className="text-center skills-card"> 
+                <Card.Header><b>Development Skills</b></Card.Header>
                     <ListGroup className="about-list" variant="flush">
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>
                         <ListGroup.Item>Frameworks</ListGroup.Item>

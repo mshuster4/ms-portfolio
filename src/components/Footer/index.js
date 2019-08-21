@@ -18,7 +18,7 @@ const Footer = () => {
             </Col>
         </Row>
       </MDBContainer>
-      <div className="footer-copyright text-center py-3">
+      <div className="footer-copyright text-center py-2">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright: <a>Domain Here</a>
         </MDBContainer>
