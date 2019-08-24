@@ -1,56 +1,89 @@
-import React from "react";
-import logo from "../../assets/page-images/ms-logo.png";
+import React, { Component } from "react";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { Nav, Navbar } from 'react-bootstrap';
-import "./style.css";
+
 
 function NavBar(props) {
 
     return (
-        <Navbar fixed="top" className="nav-bg d-sm-flex" id="menu">
+        <Navbar 
+          fixed="top" 
+          className={props.navClassName}
+        >
             <Nav className="d-none d-sm-inline-flex">
-              <Nav.Item>
-                <Nav.Link className="nav-link"
-                    href="#landing"
-                    data-menuanchor="landing"
+              <Nav.Item
+                className={props.itemClassName}
+              >
+                 <Link 
+                    activeClass="active" 
+                    style={props.style}
+                    className="landing nav-link" 
+                    to="landing" 
+                    spy={true} 
+                    smooth={true}  
+                    duraton={500}
+                    onSetActive={props.handleSetActive}
+                  >
+                  <img
+                      alt="logo"
+                      src={props.src}
+                      width="30"
+                  />
+                 </Link>
+               </Nav.Item>
+             </Nav>
+             <Nav className="d-sm-inline-flex ml-sm-auto">
+              <Nav.Item
+                className={props.itemClassName}
+              >
+                    <Link 
+                      activeClass="active" 
+                      className="portfolio nav-link" 
+                      style={props.style}
+                      to="portfolio" spy={true} 
+                      smooth={true} 
+                      offset={-40}
+                      duraton={500}
+                      onSetActive={props.handleSetActive}
+                    >
+                        Portfolio
+                    </Link>
+                </Nav.Item>
+                <Nav.Item
+                  className={props.itemClassName}              
                 >
-                    <img
-                        alt="logo"
-                        src={logo}
-                        width="30"
-                    />
-                    </Nav.Link>
+                     <Link 
+                      activeClass="active" 
+                      style={props.style}
+                      className="about nav-link" 
+                      to="about" 
+                      spy={true} 
+                      smooth={true} 
+                      duraton={500}
+                      offset={-40}
+                      onSetActive={props.handleSetActive}
+                    >
+                      About
+                    </Link>
+                </Nav.Item>
+                <Nav.Item
+                  className={props.itemClassName}
+                >
+                  <Link 
+                    activeClass="active" 
+                    style={props.style}
+                    className="contact nav-link" 
+                    to="contact" 
+                    spy={true} 
+                    smooth={true} 
+                    duraton={500}
+                    onSetActive={props.handleSetActive}
+                   >
+                    Contact
+                   </Link>
                 </Nav.Item>
               </Nav>
-              <Nav className="d-sm-inline-flex ml-sm-auto">
-                <Nav.Item>
-                  <Nav.Link className="nav-link"
-                     href="#portfolio"
-                     data-menuanchor="portfolio"
-                    
-                  >
-                    Portfolio
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link className="nav-link"
-                    href="#about"
-                    data-menuanchor="about"
-                              
-                  >
-                      About
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link className="nav-link"
-                     href="#contact"
-                     data-menuanchor="contact"
-                     
-                  >
-                    Contact
-                  </Nav.Link>
-                </Nav.Item>
-            </Nav>
-      </Navbar>
+       </Navbar>
 
     );
 

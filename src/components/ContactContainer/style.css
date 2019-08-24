@@ -4,9 +4,11 @@ button.btn.btn-default.Ripple-parent.contact-button {
     border-radius: 10px;
 }
 
-.contact-card {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.contact-container {
+    min-height: 85vh;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
 }
 
 @media only screen and (min-width: 320px) {
@@ -38,7 +40,7 @@ and (orientation : portrait) {
 
 @media only screen and (min-width: 992px) {
     .contact-container {
-        min-height: 100vh;
+        min-height: 85vh;
         flex-direction: column;
         justify-content: center;
         display: flex;

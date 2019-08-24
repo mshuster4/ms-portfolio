@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import ScrollAnimation from 'react-animate-on-scroll';
 import LandingContainer from "../components/LandingContainer";
-import LandingText from "../components/LandingText";
 import LandingImg from "../components/LandingImg";
 import Button from "../components/Button";
 import Icon from "../components/Icon";
@@ -10,7 +10,7 @@ class Landing extends Component {
 
     render() {
         return (
-          <div className="bg-color">
+           <ScrollAnimation animateIn="fadeIn">
               <LandingContainer>
                  <LandingImg className="d-flex justify-content-start">
                     <div className="landing-content">
@@ -28,7 +28,7 @@ class Landing extends Component {
                     </div>
                  </LandingImg>
               </LandingContainer>
-          </div>
+          </ScrollAnimation>
         );
     }
 }

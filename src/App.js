@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import ReactDOM  from 'react-dom';
+import { Link, DirectLink, Element , Events, animateScroll, scrollSpy, scroller } from 'react-scroll'
 import NavBar from "./components/NavBar";
 import Portfolio from "./pages/Portfolio"
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Landing from "./pages/Landing"
 import PageModal from "./pages/PageModal"
+import logoOne from "./assets/page-images/ms-logo.png"
+import logoTwo from "./assets/page-images/ms-logo-2.png"
 import blockScreenOne from "./assets/page-images/block-party-shot-one.png";
 import blockScreenTwo from "./assets/page-images/block-party-shot-two.png";
 import campScreenOne from "./assets/page-images/camp-shot-one.png";
@@ -61,15 +65,55 @@ class App extends Component {
       imageTwo: "",
       techsUsed: [],
       demo: "",
-      github: ""
+      github: "",
+      navClassName: "",
+      itemClassName: "",
+      color: "",
+      logo: ""
     }
-    console.log(this.props)
+    console.log(this.props);
     this.toggle.bind(this);
     this.onCloseModal.bind(this);
+    this.handleSetActive.bind(this)
   }
+
+handleSetActive = (to) => {
+  console.log(to)
+  if (to === "landing") {
+    this.setState({
+      navClassName: "nav-bg-1",
+      itemClassName: "nav-item-1",
+      color: "white",
+      logo: logoOne
+    })
+  }
+  else if (to === "about") {
+    this.setState({
+      navClassName: "nav-bg-3",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+ else if (to === "portfolio") {
+    this.setState({
+      navClassName: "nav-bg-2",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+  else if (to === "contact") {
+     this.setState({
+      navClassName: "nav-bg-2",
+      itemClassName: "nav-item-2",
+      color: "black",
+      logo: logoTwo
+    })
+  }
+}
  
 toggle = (num) => {
-
 
   if (num === 0) {
     this.setState({ 
@@ -178,9 +222,17 @@ toggle = (num) => {
   render() {
     return (
       <div>
-       <NavBar/>
-       <Landing/>
-       <div>
+        <NavBar
+          handleSetActive={this.handleSetActive}
+          navClassName={this.state.navClassName}
+          itemClassName={this.state.itemClassName}
+          style={{ color: this.state.color }}
+          src={this.state.logo}
+        />
+        <Element name="landing" className="landing landing-page">
+          <Landing/>
+        </Element>
+        <div>
           <PageModal
             show={this.state.modal}
             onHide={this.onCloseModal}
@@ -194,14 +246,19 @@ toggle = (num) => {
             demo={this.state.demo}
             github={this.state.github}
           />
+        </div>
+        <Element name="portfolio" className="portfolio">
+          <Portfolio
+            toggle={(num) => this.toggle(num)}
+          />
+        </Element>
+        <Element name="about" className="about about-page">
+           <About/>
+        </Element>
+        <Element name="contact" className="contact contact-page">
+          <Contact/>
+        </Element>
        </div>
-       <Portfolio
-         toggle={(num) => this.toggle(num)}
-       />
-       <About/>
-       <Contact/>
-    </div>
-
     );
   }
 }

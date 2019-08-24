@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PageCard from "../components/PageCard";
+import ScrollAnimation from 'react-animate-on-scroll';
 import ContactForm from "../components/ContactForm";
 import ContactContainer from "../components/ContactContainer";
 import Footer from "../components/Footer"
@@ -11,7 +11,8 @@ class Contact extends Component {
 
     render() {
         return(
-        <div className="contact-page">
+      <ScrollAnimation animateIn="fadeIn">  
+        <div>
           <ContactContainer>
            <Row>
             <Col sm={12}>
@@ -22,10 +23,8 @@ class Contact extends Component {
             </Col>
            </Row>
             <Row>
-              <Col sm={12}>
-                <PageCard className="contact-card">
+              <Col sm={{span: 8, offset: 2}}>
                   <ContactForm/>
-                </PageCard>
               </Col>
             </Row>
           </ContactContainer>
@@ -33,6 +32,7 @@ class Contact extends Component {
             <Footer/>
           </div>
         </div>
+       </ScrollAnimation>
         );
     }
 }

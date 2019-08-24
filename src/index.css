@@ -6,13 +6,116 @@ html, body {
    height: 100%; 
 }
 
-
-.bg-color {
+.landing-page {
    background-color: black;
+}
+
+.about-page {
+   background-color: rgb(243,243,243);
 }
 
 .contact-page {
    min-height: 100vh;
-   display: flex;
-   flex-direction: column;
 }
+
+.nav-bg-1 {
+   background-color: black;
+   border-bottom: 1px solid #737373;
+   box-shadow: 0px 1px 10px 0px #737373;
+   color: white !important;
+}
+
+.nav-bg-2 {
+   background-color: white;
+   border-bottom: 1px solid #737373;
+   box-shadow: 0px 1px 10px 0px #737373;
+   color: black !important;
+}
+
+.nav-bg-3 {
+   background-color: rgb(243,243,243);
+   border-bottom: 1px solid #737373;
+   box-shadow: 0px 1px 10px 0px #737373;
+   color: black !important;
+}
+
+
+.nav-link {
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+}
+
+.active {
+   color: #34cb99 !important;
+}
+
+
+.nav-link:hover {
+   color: #34cb99 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+   .d-sm-inline-flex.ml-sm-auto.navbar-nav {
+       width: 100%
+   }
+
+   .nav-bg {
+       justify-content: center;
+   }
+
+   .nav-item-1 {
+       width: 33.33%;
+       border-right: solid white 1px;
+       text-align: center;
+   }
+
+   .nav-item-2 {
+      width: 33.33%;
+       border-right: solid white 1px;
+       text-align: center;
+      border-right: solid black 1px;
+   }
+
+   .nav-item:last-of-type {
+       border-right: none;
+   }
+
+}
+   
+
+@media only screen and (min-width: 600px) {
+
+   .nav-bg {
+       align-items: center;
+       padding: 0px 15px 0px 15px;
+   }
+
+   .nav-pages {
+       margin-left: auto;
+   }
+
+   .nav-link {
+       font-family: Arial, Helvetica, sans-serif;
+       text-decoration: none;
+   }
+
+ 
+} 
+
+@media only screen and (min-width: 768px) {
+
+   .nav-bg {
+       align-items: center;
+       padding: 0px 15px 0px 15px;
+   }
+
+   .nav-pages {
+       margin-left: auto;
+   }
+
+
+ 
+} 
+

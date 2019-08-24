@@ -24,10 +24,6 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     padding: 10px 0; 
 }
 
-.head-shot {
-    max-width: 80%;
-    height: auto;
-}
 
 @media only screen and (min-width: 320px) {
     .about-container {
@@ -38,12 +34,6 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     }
     .text-center.about-list.card {
         margin-top: 1rem;
-    }
-
-    .head-shot {
-        max-width: 60%;
-        height: auto;
-        margin-bottom: 1rem;
     }
     
 }
@@ -67,12 +57,7 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
     .text-center.about-list.card {
         margin-top: 0;
     }
-    
-    .head-shot {
-        max-width: 100%;
-        height: auto;
-    }
-    
+
    
 }
 
@@ -87,10 +72,6 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
         text-align: left;
     }
     
-   .head-shot {
-       max-width: 80%;
-       height: auto;
-       margin-bottom: 0;
-   }
+  
 } 
 

@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import AboutContainer from "../components/AboutContainer";
 import PageCard from "../components/PageCard";
 import AboutText from "../components/AboutText";
+import ScrollAnimation from 'react-animate-on-scroll';
 import Button from "../components/Button";
 import AboutImage from "../components/AboutImage"
 import DevelopmentSkills from "../components/DevelopmentSkills";
 import DesignSkills from "../components/DesignSkills"
 import { Row, Col } from "react-bootstrap";
 
+
 class About extends Component {
     render() {
         return (
-          <div className="bg-color">
+           <ScrollAnimation animateIn="fadeIn">
             <AboutContainer>
                 <Row>
                   <Col sm={12}>
@@ -51,7 +53,7 @@ class About extends Component {
                     </Col>
                 </Row>
             </AboutContainer>
-          </div>
+           </ScrollAnimation>
         )
     }
 }

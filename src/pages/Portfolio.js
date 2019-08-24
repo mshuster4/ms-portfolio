@@ -1,22 +1,10 @@
 import React, { Component } from "react";
 import { Row, Col } from "react-bootstrap"
+import ScrollAnimation from 'react-animate-on-scroll';
 import PortfolioContainer from "../components/PortfolioContainer"
 import PortfolioImage from "../components/PortfolioImage"
 import Button from "../components/Button";
 import Icon from "../components/Icon";
-import blockScreenOne from "../assets/page-images/block-party-shot-one.png";
-import blockScreenTwo from "../assets/page-images/block-party-shot-two.png";
-import campScreenOne from "../assets/page-images/camp-shot-one.png";
-import campScreenTwo from "../assets/page-images/camp-shot-two.png";
-import readingScreenOne from "../assets/page-images/reading-shot-one.png"
-import readingScreenTwo from "../assets/page-images/reading-shot-two.png"
-import friendScreenOne from "../assets/page-images/friend-shot-one.png"
-import friendScreenTwo from "../assets/page-images/friend-shot-two.png"
-import brewsScreenOne from "../assets/page-images/brews-shot-one.png";
-import brewsScreenTwo from "../assets/page-images/brews-shot-two.png";
-import mongoScreenOne from "../assets/page-images/mongo-shot-one.png";
-import mongoScreenTwo from "../assets/page-images/mongo-shot-two.png";
-import projects from "../projects.json";
 import blockPreview from "../assets/page-images/block-party-preview.png";
 import campPreview from "../assets/page-images/camp-preview.png";
 import readingPreview from "../assets/page-images/reading-preview.png";
@@ -39,9 +27,11 @@ class Portfolio extends Component {
   
   render() {
       return (
+       <ScrollAnimation animateIn="fadeIn">  
+      <div> 
         <PortfolioContainer>
             <Row>
-              <Col xs={12} md={6} lg={4}>
+              <Col xs={12} md={6} lg={4} className="mb-4">
                     <PortfolioImage
                         img={blockPreview}
                         alt="Block Party Preview"
@@ -60,7 +50,7 @@ class Portfolio extends Component {
                     </PortfolioImage>
                 </Col>
 
-                <Col xs={12} md={6} lg={4}>
+                <Col xs={12} md={6} lg={4} className="mb-4">
                   <PortfolioImage
                     img={readingPreview}
                     alt="Reading Wishlist Preview"
@@ -78,7 +68,7 @@ class Portfolio extends Component {
                   </PortfolioImage>
                 </Col>
 
-                <Col xs={12} md={6} lg={4}>
+                <Col xs={12} md={6} lg={4} className="mb-4">
                   <PortfolioImage
                       img={friendPreview}
                       alt="Friend Finder Preview"
@@ -151,6 +141,8 @@ class Portfolio extends Component {
                 </Col>
                 </Row>
                </PortfolioContainer>
+              </div>
+            </ScrollAnimation>
       )
   }
 
