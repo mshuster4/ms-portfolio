@@ -41,8 +41,7 @@ function NavBar(props) {
                       className="portfolio nav-link" 
                       style={props.style}
                       to="portfolio" spy={true} 
-                      smooth={true} 
-                      offset={-40}
+                      smooth={true}
                       duraton={500}
                       onSetActive={props.handleSetActive}
                     >
@@ -60,7 +59,6 @@ function NavBar(props) {
                       spy={true} 
                       smooth={true} 
                       duraton={500}
-                      offset={-40}
                       onSetActive={props.handleSetActive}
                     >
                       About
@@ -77,6 +75,7 @@ function NavBar(props) {
                     spy={true} 
                     smooth={true} 
                     duraton={500}
+                    offset={50}
                     onSetActive={props.handleSetActive}
                    >
                     Contact

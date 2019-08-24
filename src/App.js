@@ -232,7 +232,18 @@ toggle = (num) => {
         <Element name="landing" className="landing landing-page">
           <Landing/>
         </Element>
-        <div>
+        <Element name="portfolio" className="portfolio">
+          <Portfolio
+            toggle={(num) => this.toggle(num)}
+          />
+        </Element>
+        <Element name="about" className="about about-page">
+           <About/>
+        </Element>
+        <Element name="contact" className="contact contact-page">
+          <Contact/>
+        </Element>
+         <div>
           <PageModal
             show={this.state.modal}
             onHide={this.onCloseModal}
@@ -247,17 +258,6 @@ toggle = (num) => {
             github={this.state.github}
           />
         </div>
-        <Element name="portfolio" className="portfolio">
-          <Portfolio
-            toggle={(num) => this.toggle(num)}
-          />
-        </Element>
-        <Element name="about" className="about about-page">
-           <About/>
-        </Element>
-        <Element name="contact" className="contact contact-page">
-          <Contact/>
-        </Element>
        </div>
     );
   }

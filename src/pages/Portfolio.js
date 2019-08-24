@@ -27,11 +27,10 @@ class Portfolio extends Component {
   
   render() {
       return (
-       <ScrollAnimation animateIn="fadeIn">  
-      <div> 
         <PortfolioContainer>
             <Row>
               <Col xs={12} md={6} lg={4} className="mb-4">
+                <ScrollAnimation animateIn="fadeIn">  
                     <PortfolioImage
                         img={blockPreview}
                         alt="Block Party Preview"
@@ -48,27 +47,31 @@ class Portfolio extends Component {
                         Learn More <Icon icon={["fas", "book-open"]} />
                       </Button>
                     </PortfolioImage>
+                  </ScrollAnimation>
                 </Col>
 
                 <Col xs={12} md={6} lg={4} className="mb-4">
-                  <PortfolioImage
-                    img={readingPreview}
-                    alt="Reading Wishlist Preview"
-                  >
-                    <h5 className="project-title">Reading Wishlist</h5>
-                     <Button
-                         onClick = {() => this.handleClick(1)}
-                         onModal= {this.props.onModal}
-                         className = "portfolio-button"
-                         outline={true}
-                         size = "sm"
-                      >
-                      Learn More <Icon icon={["fas", "book-open"]} />
-                    </Button>
-                  </PortfolioImage>
+                  <ScrollAnimation animateIn="fadeIn">  
+                    <PortfolioImage
+                      img={readingPreview}
+                      alt="Reading Wishlist Preview"
+                    >
+                      <h5 className="project-title">Reading Wishlist</h5>
+                        <Button
+                            onClick = {() => this.handleClick(1)}
+                            onModal= {this.props.onModal}
+                            className = "portfolio-button"
+                            outline={true}
+                            size = "sm"
+                        >
+                        Learn More <Icon icon={["fas", "book-open"]} />
+                      </Button>
+                    </PortfolioImage>
+                  </ScrollAnimation>  
                 </Col>
 
                 <Col xs={12} md={6} lg={4} className="mb-4">
+                 <ScrollAnimation animateIn="fadeIn">  
                   <PortfolioImage
                       img={friendPreview}
                       alt="Friend Finder Preview"
@@ -84,9 +87,11 @@ class Portfolio extends Component {
                       Learn More <Icon icon={["fas", "book-open"]} />
                     </Button>
                   </PortfolioImage>
+                 </ScrollAnimation>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
+                  <ScrollAnimation animateIn="fadeIn">  
                     <PortfolioImage
                         img={campPreview}
                         alt="Camp Wanna Preview"
@@ -102,9 +107,11 @@ class Portfolio extends Component {
                       Learn More <Icon icon={["fas", "book-open"]} />
                     </Button>
                   </PortfolioImage>
+                 </ScrollAnimation>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
+                  <ScrollAnimation animateIn="fadeIn">  
                   <PortfolioImage
                       img={brewsPreview}
                       alt="Brews Beats Preview"
@@ -120,9 +127,11 @@ class Portfolio extends Component {
                       Learn More <Icon icon={["fas", "book-open"]} />
                     </Button>
                   </PortfolioImage>
+                 </ScrollAnimation>
                 </Col>
 
                 <Col xs={12} md={6} lg={4}>
+                 <ScrollAnimation animateIn="fadeIn">  
                   <PortfolioImage
                       img={mongoPreview}
                       alt="News Scraper Preview"
@@ -138,11 +147,11 @@ class Portfolio extends Component {
                       Learn More <Icon icon={["fas", "book-open"]} />
                     </Button>
                   </PortfolioImage>
+                  </ScrollAnimation>
                 </Col>
-                </Row>
-               </PortfolioContainer>
-              </div>
-            </ScrollAnimation>
+              </Row>
+            </PortfolioContainer>
+
       )
   }
 
