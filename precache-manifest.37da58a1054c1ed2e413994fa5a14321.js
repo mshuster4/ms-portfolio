@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ce85d2af2523a1159c9b714a11bf0a4",
+    "revision": "b0a6460a31f7c3bb4d1a6e0263973b0b",
     "url": "/ms-portfolio/index.html"
   },
   {
-    "revision": "d94e5ba8373cf65dc96d",
+    "revision": "5adf961190d42c84ea9b",
     "url": "/ms-portfolio/static/css/2.4fe57764.chunk.css"
   },
   {
-    "revision": "8a9a92558c8d5c3fc037",
-    "url": "/ms-portfolio/static/css/main.2ef17717.chunk.css"
+    "revision": "d405fceb898a4384b243",
+    "url": "/ms-portfolio/static/css/main.6182ba54.chunk.css"
   },
   {
-    "revision": "d94e5ba8373cf65dc96d",
-    "url": "/ms-portfolio/static/js/2.ea9b4ded.chunk.js"
+    "revision": "5adf961190d42c84ea9b",
+    "url": "/ms-portfolio/static/js/2.98d42390.chunk.js"
   },
   {
-    "revision": "8a9a92558c8d5c3fc037",
-    "url": "/ms-portfolio/static/js/main.340bdbcd.chunk.js"
+    "revision": "d405fceb898a4384b243",
+    "url": "/ms-portfolio/static/js/main.1b4c213f.chunk.js"
   },
   {
     "revision": "d1e0065dbc0bd010201b",
