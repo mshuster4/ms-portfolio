@@ -34,7 +34,9 @@ import {
   faCheckSquare,
   faRocket,
   faBookOpen,
-  faArrowDown
+  faArrowDown,
+  faPenNib,
+  faCode
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -47,7 +49,9 @@ library.add(
   faCheckSquare,
   faRocket,
   faBookOpen,
-  faArrowDown
+  faArrowDown,
+  faPenNib,
+  faCode
 );
 
 

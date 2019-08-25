@@ -1,12 +1,15 @@
-import React from "react"
-import { ListGroup, Card } from 'react-bootstrap'
+import React from "react";
+import { ListGroup, Card } from 'react-bootstrap';
+import Icon from "../Icon";
 import "./style.css"
 
 function DevelopmentSkills() {
     return (
         <div className="skills-list">
             <Card className="text-center skills-card"> 
-                <Card.Header><b>Development Skills</b></Card.Header>
+                <Card.Header>
+                  <h5 className="list-header"><b> Development Skills </b><Icon icon={["fas", "code"]}></Icon></h5>
+                </Card.Header>
                     <ListGroup className="about-list" variant="flush">
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>
                         <ListGroup.Item>Frameworks</ListGroup.Item>

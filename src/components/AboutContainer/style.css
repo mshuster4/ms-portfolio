@@ -10,18 +10,22 @@ button.btn.btn-outline-black.Ripple-parent.about-button {
 }
 
 .list-group-item {
-    padding: 10px 0 0 0;
-    border: none !important 
+   
 }
+
 
 .skills-card {
     box-shadow: 3px 3px 10px 2px #737373;
-    padding-bottom: 10px;
 }
 
 .card-header {
-    background-color: white;
-    padding: 10px 0; 
+    background-color: #34cb99;
+    color: white;
+}
+
+.head-shot {
+    max-width: 75%;
+    height: auto;
 }
 
 

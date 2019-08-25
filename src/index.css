@@ -12,6 +12,8 @@ html, body {
 
 .about-page {
    background-color: rgb(243,243,243);
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
 
 .contact-page {
