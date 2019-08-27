@@ -12,7 +12,7 @@ function DevelopmentSkills() {
                 </Card.Header>
                     <ListGroup className="about-list" variant="flush">
                         <ListGroup.Item>HTML/CSS</ListGroup.Item>
-                        <ListGroup.Item>Frameworks</ListGroup.Item>
+                        <ListGroup.Item>Bootstrap</ListGroup.Item>
                         <ListGroup.Item>JavaScript</ListGroup.Item>
                         <ListGroup.Item>Node.js/Express</ListGroup.Item>
                         <ListGroup.Item>React.js</ListGroup.Item>

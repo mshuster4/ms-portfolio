@@ -11,7 +11,7 @@ function ModalList(props) {
     console.log(listItems);
     return (
         <div className="modal-list">
-            <h4 className="list-header">Technologies Used</h4>
+            <h4 className="modal-list-header">Technologies Used</h4>
             <ul>
                 {listItems}
             </ul>

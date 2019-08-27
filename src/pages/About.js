@@ -7,7 +7,8 @@ import Button from "../components/Button";
 import AboutImage from "../components/AboutImage"
 import DevelopmentSkills from "../components/DevelopmentSkills";
 import DesignSkills from "../components/DesignSkills"
-import { Row, Col } from "react-bootstrap";
+import Icon from "../components/Icon"
+import { Row, Col, Card } from "react-bootstrap";
 
 
 class About extends Component {
@@ -45,12 +46,12 @@ class About extends Component {
                   </Col>
                 </Row>
                 <Row>
-                    <Col sm={12} md={6} lg={6}>
-                        <DevelopmentSkills/>
-                    </Col>
-                    <Col sm={12} md={6} lg={6}>
-                        <DesignSkills/>
-                    </Col>
+                  <Col>
+                    <DevelopmentSkills/>
+                  </Col>
+                  <Col>
+                    <DesignSkills/>
+                  </Col> 
                 </Row>
             </AboutContainer>
            </ScrollAnimation>
